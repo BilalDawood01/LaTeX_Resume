@@ -1,0 +1,403 @@
+%-------------------------
+% Resume in Latex
+% Author : Bilal Dawood
+% Based off of: https://github.com/sb2nov/resume
+% License : MIT
+%------------------------
+
+\documentclass[A4,10pt]{article}
+
+\usepackage{latexsym}
+\usepackage[empty]{fullpage}
+\usepackage{titlesec}
+\usepackage{marvosym}
+\usepackage[usenames,dvipsnames]{color}
+\usepackage{verbatim}
+\usepackage{enumitem}
+\usepackage[hidelinks]{hyperref}
+\usepackage{fancyhdr}
+\usepackage[english]{babel}
+\usepackage{tabularx}
+\input{glyphtounicode}
+
+
+%----------FONT OPTIONS----------
+% sans-serif
+% \usepackage[sfdefault]{FiraSans}
+% \usepackage[sfdefault]{roboto}
+% \usepackage[sfdefault]{noto-sans}
+% \usepackage[default]{sourcesanspro}
+
+% serif
+% \usepackage{CormorantGaramond}
+% \usepackage{charter}
+
+
+\pagestyle{fancy}
+\fancyhf{} % clear all header and footer fields
+\fancyfoot{}
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0pt}
+
+% Adjust margins
+\addtolength{\oddsidemargin}{-0.5in}
+\addtolength{\evensidemargin}{-0.5in}
+\addtolength{\textwidth}{1in}
+\addtolength{\topmargin}{-.5in}
+\addtolength{\textheight}{1.0in}
+
+\urlstyle{same}
+
+\raggedbottom
+\raggedright
+\setlength{\tabcolsep}{0in}
+
+% Sections formatting
+\titleformat{\section}{
+  \vspace{-4pt}\scshape\raggedright\large
+}{}{0em}{}[\color{black}\titlerule \vspace{-5pt}]
+
+% Ensure that generate pdf is machine readable/ATS parsable
+\pdfgentounicode=1
+
+%-------------------------
+% Custom commands
+\newcommand{\resumeItem}[1]{
+  \item\small{
+    {#1 \vspace{-2pt}}
+  }
+}
+
+\newcommand{\resumeSubheading}[4]{
+  \vspace{-2pt}\item
+    \begin{tabular*}{0.97\textwidth}[t]{l@{\extracolsep{\fill}}r}
+      \textbf{#1} & #2 \\
+      \textit{\small#3} & \textit{\small #4} \\
+    \end{tabular*}\vspace{-7pt}
+}
+
+\newcommand{\resumeSubSubheading}[2]{
+    \item
+    \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
+      \textit{\small#1} & \textit{\small #2} \\
+    \end{tabular*}\vspace{-7pt}
+}
+
+\newcommand{\resumeProjectHeading}[2]{
+    \item
+    \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
+      \small#1 & #2 \\
+    \end{tabular*}\vspace{-7pt}
+}
+
+\newcommand{\resumeSubItem}[1]{\resumeItem{#1}\vspace{-4pt}}
+
+\renewcommand\labelitemii{$\vcenter{\hbox{\tiny$\bullet$}}$}
+
+\newcommand{\resumeSubHeadingListStart}{\begin{itemize}[leftmargin=0.15in, label={}]}
+\newcommand{\resumeSubHeadingListEnd}{\end{itemize}}
+\newcommand{\resumeItemListStart}{\begin{itemize}}
+\newcommand{\resumeItemListEnd}{\end{itemize}\vspace{-5pt}}
+
+%-------------------------------------------
+%%%%%%  RESUME STARTS HERE  %%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+\begin{document}
+
+%----------HEADING----------
+% \begin{tabular*}{\textwidth}{l@{\extracolsep{\fill}}r}
+%   \textbf{\href{http://sourabhbajaj.com/}{\Large Sourabh Bajaj}} & Email : \href{mailto:sourabh@sourabhbajaj.com}{sourabh@sourabhbajaj.com}\\
+%   \href{http://sourabhbajaj.com/}{http://www.sourabhbajaj.com} & Mobile : +1-123-456-7890 \\
+% \end{tabular*}
+
+\begin{center}
+    \textbf{\Huge \scshape Bilal Dawood} \\ \vspace{1pt}
+    \small +1 587-429-7635 $|$ \href{https://bilaldawood01.github.io}{\underline{Website}} $|$ 
+    \href{https://linkedin.com/in/bilal-dawood-2021}{\underline{LinkedIn}} $|$
+    \href{https://github.com/BilalDawood01}{\underline{Github}} $|$
+\small{Calgary, AB}
+\end{center}
+
+
+%-----------EDUCATION-----------
+\section{Education}
+  \resumeSubHeadingListStart
+    \resumeSubheading
+      {University of Calgary}{Calgary, AB}
+      {BSc in Electrical Engineering, Minor in Digital Engineering | GPA: 3.64}{Aug. 2019 -- May 2023}
+  %  \resumeSubheading
+  %    {Blinn College}{Bryan, TX}
+   %   {Associate's in Liberal Arts}{Aug. 2014 -- May 2018}
+  \resumeSubHeadingListEnd
+
+
+%-----------EXPERIENCE-----------
+\section{Experience}
+  \resumeSubHeadingListStart
+
+    \resumeSubheading
+      {Digital Hardware Engineer (intern)}{May 2022 -- August 2023}
+      {Ericsson Canada Inc}{Ottawa, ON}
+      \resumeItemListStart
+        \resumeItem{Achieved 70\% reduction in Thermal verification time by developing an automation tool using Python.}
+        \resumeItem{Ensured accuracy by creating test cases and comparing recorded metrics manually with component datasheets.}
+        \resumeItem{Showcased report writing and presentation skills by preparing user manual and presenting results to management.}
+        \resumeItem{Ensured electrical functionality by verifying power rail integrity on high voltage radio boards using Power Tree and multimeter.}
+        \resumeItem{Confirmed data transfer compliance by identifying and recording Flash SPI interface timing parameters using Oscilloscope.}
+        \resumeItem{Supported PCB design verification using Allegro Cadence by leveraging existing radio board schematics.}
+        \resumeItem{Hands on experience with UART, JTAG, I2C and SPI with Ericsson radio boards.}
+        \resumeItem{Power Rail Analysis using Power Tree and measuring continuity across capacitors to ensure no shorts were created.}
+        \resumeItem{Leading research on high-frequency testing equipment, targeting optimal performance and value by comparing price with datasheet specifications and testing requirements.}
+      \resumeItemListEnd
+      
+% -----------Multiple Positions Heading-----------
+%    \resumeSubSubheading
+%     {Software Engineer I}{Oct 2014 - Sep 2016}
+%     \resumeItemListStart
+%        \resumeItem{Apache Beam}
+%          {Apache Beam is a unified model for defining both batch and streaming data-parallel processing pipelines}
+%     \resumeItemListEnd
+%    \resumeSubHeadingListEnd
+%-------------------------------------------
+
+
+    \resumeSubheading
+      {Android SDK/NDK Full-Stack Developer (Intern)}{Feb 2023 -- August 2023}
+      {Ericsson Canada Inc.}{Ottawa, ON}
+      \resumeItemListStart
+        \resumeItem{Enhanced backend data management by 57\% for application by creating 4 new classes and off-loading 80\% of the data into separate files.}
+        \resumeItem{Increased UI functionality by incorporating filters.}
+        \resumeItem{Optimized app performance by reducing page load times by 90\% by replacing batch loading with infinite scrolling and removing redundant functions.}
+        \resumeItem{Collected and analyzed 5G performance metrics by conducting technical tests using Qualcomm Network Testing Device.}
+      \resumeItemListEnd
+
+  \resumeSubHeadingListEnd
+
+%-----------LEADERSHIP EXPERIENCE-----------
+%\section{Leadership Experience}
+%  \resumeSubHeadingListStart
+%
+%    \resumeSubheading
+%      {Treasurer}{August 2020 -- May 2022}
+%      {IEEE UofC Student Branch Executive Council}{Calgary, AB}
+%      \resumeItemListStart
+%        \resumeItem{Managed and maintained branch accounts for professional associations.}
+%        \resumeItem{Prepared and submitted Annual Budget reports and Financials.}
+%        \resumeItem{Developed financial strategies, ensured suitable funding for events, and advised on activity cost allocation.}
+%        \resumeItem{Presented data in a methodical format in front of other executive council members, demonstrating analytical thinking and proactive communication skills.}
+%      \resumeItemListEnd
+%
+%    \resumeSubheading
+%      {Electrical Team Lead}{September 2021 -- September 2022}
+%      {Team Zeus}{Calgary, AB}
+%      \resumeItemListStart
+%        \resumeItem{Provided guidance to 5 members for completion of electrical wiring of Formula SAE electric car.}
+%        \resumeItem{Collaborated with other technical teams to integrate electrical systems into the vehicle.}
+%        \resumeItem{Assisted in designing and testing Battery Management System (BMS) and Electrical Control Unit (ECU).}
+%        \resumeItem{Applied practical experience in developing and testing Power Distribution Units (PDUs).}
+%      \resumeItemListEnd
+%  \resumeSubHeadingListEnd
+
+%-----------PROJECTS-----------
+\section{Projects}
+    \resumeSubHeadingListStart
+      \resumeProjectHeading
+      {\textbf{Automated Transit Enforcement} $|$ \emph{Python, Git, Software Dev, Hardware Dev}}{September 2023 -- May 2024}
+      \resumeItemListStart
+        \resumeItem{Improved transit efficiency by 13\% by leading the design and implementation of an automated enforcement prototype for Calgary Transit.}
+        \resumeItem{Reduced power consumption by 36\% by developing a hardware proof-of-concept with Raspberry Pi and sensors (LiDAR, GPS, camera) to trigger recordings on Linux interface, which was transmitted and stored on the server.}
+        \resumeItem{Realized 95\% license plate recognition accuracy by utilizing PaddleOCR for text detection and leveraging a cloud-based LPR API.}
+        \resumeItem{Achieved 93\% mAP vehicle detection by utilizing YOLOv8 object tracking model with data collected and labeled locally.}
+        \resumeItem{Designed and implemented SQLite database to store violation data and developed a graphical user interface for easy viewing and management of violations.}
+        \resumeItemListEnd
+
+        \resumeProjectHeading
+        {\textbf{Optimized Real-time Audio Filtering} $|$ \emph{C, ARM Assembly, STM MCU, Embedded Systems}}{date -- date}
+        \resumeItemListStart
+          \resumeItem{Designed and implemented embedded real-time audio filter on the STM32F411 using C.}
+          \resumeItem{Reduced filter sampling rate by 28\% and reduced program size by 13.6\% by utilizing optimization techniques involving block processing and use of ARM Assembly instructions for ARM Cortex-M4 processor.}
+          \resumeItem{Implemented and compared various FIR filtering techniques (Circular Buffer, Block Processing).}
+          \resumeItem{Compared performance (speed, memory usage, program size) and verified integrity of filter after implementation.}
+          \resumeItem{Implemented Loop Unrolling and utilized architecture-specific SIMD instructions to meet audio timing requirements.}
+          \resumeItem{Created Python notebook to verify integrity of signal after filtering.}
+        \resumeItemListEnd
+        
+        \resumeProjectHeading
+        {\textbf{2D Image Filtering and Convolution on MCU} $|$ \emph{C, Python, STM MCU, ARM Cortex-M4, DSP, Embedded Systems}}{date -- date}
+        \resumeItemListStart
+          \resumeItem{Implemented various 2D Image filtering techniques using 3x3 kernels on STM32F411 using C.}
+          \resumeItem{Loaded images to STM Microcontroller as binary file. Utilized convolution techniques to filter images.}
+          \resumeItem{Paid close attention to data access and boundary handling for image convolution.}
+          \resumeItem{Implemented and observed the affect of various 3x3 kernels (edge filter, gaussian blur, sharpening).}
+          \resumeItem{Created Python notebook to view images by decrypting binary file.}
+        \resumeItemListEnd
+
+        \resumeProjectHeading
+        {\textbf{Altera DE10-Lite FPGA Distance Sensor} $|$ \emph{VHDL, Intel Quartus Prime, MODELSIM, FPGA}}{date -- date}
+        \resumeItemListStart
+          \resumeItem{Implemented voltage-to-distance conversion in VHDL using Intel Quartus Prime.}
+          \resumeItem{Design and implementation met timing requirements for digital signal processing.}
+          \resumeItem{Created testbenches to conduct tests and simulate digital signals and switch gates to be verified using MODELSIM.}
+          \resumeItem{Configured DE10 display for distance/voltage based on switch state.}
+          \resumeItem{Demonstrated proficiency in FPGA programming, sensor integration, and VHDL, highlighting skills in hardware design and testing.}
+          \resumeItem{Generated RTL schematic to view flow of bits.}
+        \resumeItemListEnd
+  
+        \resumeProjectHeading
+        {\textbf{Hardware Accelerator Implementation (Pynq-Z2 FPGA)} $|$ \emph{C, Xilinx Vitis HLS, FPGA, Python}}{date -- date}
+        \resumeItemListStart
+          \resumeItem{Utilized AMD Xilinx Vitis High-Level-Synthesis (HLS) to build, synthesize and debug C code.}
+          \resumeItem{Generated RTL designs and ensured proper resource utilization.}
+          \resumeItem{Implemented hardware optimization techniques to improve performance of MAC operations on FPGA.}
+          \resumeItem{Demonstrated proficiency with Loop Unrolling, Loop Fission and Pipelining optimization techniques on hardware.}
+          \resumeItem{Conducted thorough testing and validation procedures using testbenches created in C as well as through C simulation and synthesis, to ensure functionality and performance of operations.}
+          \resumeItem{Analyzed synthesis reports and utilized pragma directives to optimize loop latency, resource utilization and overall performance of hardware design.}
+          \resumeItem{Contributed to the development of optimized hardware accelerators, enhancing processing efficiency and throughput for FPGA-based applications.}
+          \resumeItem{Achieved 10\%-time reduction verified by exporting IP and generating bit-files to flash bitstreams to FPGA via Python notebook.}
+        \resumeItemListEnd
+
+        \resumeProjectHeading
+        {\textbf{C++ Flight Management Program} $|$ \emph{C++, File Handling, Algorithm, Software Development}}{date -- date}
+        \resumeItemListStart
+          \resumeItem{Developed and implemented a Flight Management Program in C++, incorporating classes for Flight, Passenger, and Seat.}
+          \resumeItem{Utilized file handling to read and process flight information from a text file, showcasing proficiency in data input/output operations.}
+          \resumeItem{Implemented functionalities such as displaying seat maps, managing passenger information, adding/removing passengers, and saving data to enhance the program's usability.}
+          \resumeItem{Applied the Selection Sort algorithm for efficient organization of passenger data based on seat locations, demonstrating algorithmic problem-solving skills.}
+        \resumeItemListEnd
+  
+        \resumeProjectHeading
+        {\textbf{UnderPressure Posture Corrector} $|$ \emph{Arduino, Embedded Systems, Agile Methodologies, Product Development}}{date -- date}
+        \resumeItemListStart
+          \resumeItem{Developed an Arduino-based posture corrector using an Arduino Nano, resistive strips, and a speaker.}
+          \resumeItem{Applied voltage dividers and utilized C++ and Arduino IDE for embedded programming.}
+          \resumeItem{Implemented Agile project management methodologies (sprint and scrum) for efficient development.}
+          \resumeItem{Received awards for "Most Innovative Product," "Best Marketing," and "Best Use of Humor."}
+        \resumeItemListEnd
+  
+        \resumeProjectHeading
+        {\textbf{SolarCam} $|$ \emph{Embedded Systems, Product Development, ENEL 400 Project}}{date -- date}
+        \resumeItemListStart
+          \resumeItem{Developed an Arduino-based solar panel tracking system using light sensors and servo motors.}
+          \resumeItem{Designed and implemented algorithms for efficient solar tracking based on real-time sensor data.}
+          \resumeItem{Utilized C++ and Arduino IDE for embedded programming and control of hardware components.}
+          \resumeItem{Collaborated with team members to optimize system performance and ensure reliability under varying environmental conditions.}
+        \resumeItemListEnd
+  
+        \resumeProjectHeading
+        {\textbf{Calgary Weather Data Visualization} $|$ \emph{Java, GUI, Data Visualization, ENGG 233 Project}}{date -- date}
+        \resumeItemListStart
+          \resumeItem{Implemented a GUI and user-interactive program using Java-based Language Processing.}
+          \resumeItem{Displayed daily average minimum and maximum temperature data for the last 30 years in Calgary.}
+          \resumeItem{Enabled user flexibility in selecting data for specific months and displaying maximum or minimum temperatures.}
+        \resumeItemListEnd
+  
+        \resumeProjectHeading
+        {\textbf{Point Based Graphical Zoom} $|$ \emph{MATLAB, Graphical User Interface, Image Processing}}{date -- date}
+        \resumeItemListStart
+          \resumeItem{Used MATLAB to create a graphical point-based zoom function.}
+          \resumeItem{The function generated a bounding box and produced a new figure based on any two points on a MATLAB-produced graph.}
+        \resumeItemListEnd
+  
+        \resumeProjectHeading
+        {\textbf{Impact of Green Line LRT Research Project} $|$ \emph{Research, Analysis, Presentation}}{date -- date}
+        \resumeItemListStart
+          \resumeItem{Researched and wrote a report on the impact of the Green Line LRT and its stations on stakeholders.}
+          \resumeItem{Analyzed stakeholders, including the public, residents near the station, taxpayers, and Calgary Transit employees.}
+          \resumeItem{Considered financial restrictions and proposed solutions to potential problems.}
+          \resumeItem{Gave a professional and technical presentation summarizing findings.}
+        \resumeItemListEnd
+  
+        \resumeProjectHeading
+        {\textbf{Deep learning Finger Digit Classifier GUI} $|$ \emph{Python, Machine Learning, GUI, Data Visualization}}{date -- date}
+        \resumeItemListStart
+          \resumeItem{Developed a finger digits classifier with fastai and a CNN, achieving a significant accuracy boost from 60\% to 88\%.}
+          \resumeItem{Employed data augmentation techniques to enhance real-time finger count prediction accuracy.}
+          \resumeItem{Proficiently managed image data and analyzed model performance for thorough evaluation and refinement.}
+          \resumeItem{Created a user-friendly GUI application and utilized Python libraries effectively for streamlined development and enhanced collaboration.}
+          \resumeItem{Utilized Git for version control, maintaining a clean and organized codebase.}
+          \resumeItem{Employed Seaborn and Matplotlib for data visualization, enhancing the presentation of results.}
+        \resumeItemListEnd
+        \resumeProjectHeading
+        {\textbf{C++ Flight Management Program} $|$ \emph{C++, File Handling, Algorithm, Software Development}}{date -- date}
+        \resumeItemListStart
+          \resumeItem{Developed and implemented a Flight Management Program in C++, incorporating classes for Flight, Passenger, and Seat.}
+          \resumeItem{Utilized file handling to read and process flight information from a text file, showcasing proficiency in data input/output operations.}
+          \resumeItem{Implemented functionalities such as displaying seat maps, managing passenger information, adding/removing passengers, and saving data to enhance the program's usability.}
+          \resumeItem{Applied the Selection Sort algorithm for efficient organization of passenger data based on seat locations, demonstrating algorithmic problem-solving skills.}
+        \resumeItemListEnd
+  
+        \resumeProjectHeading
+        {\textbf{UnderPressure Posture Corrector} $|$ \emph{Arduino, Embedded Systems, Agile Methodologies, Product Development}}{date -- date}
+        \resumeItemListStart
+          \resumeItem{Developed an Arduino-based posture corrector using an Arduino Nano, resistive strips, and a speaker.}
+          \resumeItem{Applied voltage dividers and utilized C++ and Arduino IDE for embedded programming.}
+          \resumeItem{Implemented Agile project management methodologies (sprint and scrum) for efficient development.}
+          \resumeItem{Received awards for "Most Innovative Product," "Best Marketing," and "Best Use of Humor."}
+        \resumeItemListEnd
+  
+        \resumeProjectHeading
+        {\textbf{SolarCam} $|$ \emph{Embedded Systems, Product Development, ENEL 400 Project}}{date -- date}
+        \resumeItemListStart
+          \resumeItem{Developed an Arduino-based solar panel tracking system using light sensors and servo motors.}
+          \resumeItem{Designed and implemented algorithms for efficient solar tracking based on real-time sensor data.}
+          \resumeItem{Utilized C++ and Arduino IDE for embedded programming and control of hardware components.}
+          \resumeItem{Collaborated with team members to optimize system performance and ensure reliability under varying environmental conditions.}
+        \resumeItemListEnd
+  
+        \resumeProjectHeading
+        {\textbf{Calgary Weather Data Visualization} $|$ \emph{Java, GUI, Data Visualization, ENGG 233 Project}}{date -- date}
+        \resumeItemListStart
+          \resumeItem{Implemented a GUI and user-interactive program using Java-based Language Processing.}
+          \resumeItem{Displayed daily average minimum and maximum temperature data for the last 30 years in Calgary.}
+          \resumeItem{Enabled user flexibility in selecting data for specific months and displaying maximum or minimum temperatures.}
+        \resumeItemListEnd
+  
+        \resumeProjectHeading
+        {\textbf{Point Based Graphical Zoom} $|$ \emph{MATLAB, Graphical User Interface, Image Processing}}{date -- date}
+        \resumeItemListStart
+          \resumeItem{Used MATLAB to create a graphical point-based zoom function.}
+          \resumeItem{The function generated a bounding box and produced a new figure based on any two points on a MATLAB-produced graph.}
+        \resumeItemListEnd
+  
+        \resumeProjectHeading
+        {\textbf{Impact of Green Line LRT Research Project} $|$ \emph{Research, Analysis, Presentation}}{date -- date}
+        \resumeItemListStart
+          \resumeItem{Researched and wrote a report on the impact of the Green Line LRT and its stations on stakeholders.}
+          \resumeItem{Analyzed stakeholders, including the public, residents near the station, taxpayers, and Calgary Transit employees.}
+          \resumeItem{Considered financial restrictions and proposed solutions to potential problems.}
+          \resumeItem{Gave a professional and technical presentation summarizing findings.}
+        \resumeItemListEnd
+  
+        \resumeProjectHeading
+        {\textbf{Deep learning Finger Digit Classifier GUI} $|$ \emph{Python, Machine Learning, GUI, Data Visualization}}{date -- date}
+        \resumeItemListStart
+          \resumeItem{Developed a finger digits classifier with fastai and a CNN, achieving a significant accuracy boost from 60\% to 88\%.}
+          \resumeItem{Employed data augmentation techniques to enhance real-time finger count prediction accuracy.}
+          \resumeItem{Proficiently managed image data and analyzed model performance for thorough evaluation and refinement.}
+          \resumeItem{Created a user-friendly GUI application and utilized Python libraries effectively for streamlined development and enhanced collaboration.}
+          \resumeItem{Utilized Git for version control, maintaining a clean and organized codebase.}
+          \resumeItem{Employed Seaborn and Matplotlib for data visualization, enhancing the presentation of results.}
+        \resumeItemListEnd
+      \resumeSubHeadingListEnd  
+        
+
+
+
+%
+%-----------PROGRAMMING SKILLS-----------
+\section{Technical Skills}
+ \begin{itemize}[leftmargin=0.15in, label={}]
+    \small{\item{
+     \textbf{Languages}{: Java, Python, C/C++, MATLAB, JavaScript, HTML/CSS, Assembly (ARM, MIPS), Verilog} \\
+     \textbf{Frameworks}{: React, Node.js, Flask, Material-UI, FastAPI} \\
+     \textbf{Developer Tools}{: Git, Gerrit, Linux, PuTTy, MS Azure, VS Code, PyCharm, Jira} \\
+     \textbf{Design and Simulation}{: Cadence Allegro, MODELSIM, NI Multisim, Simulink, PS:SE, Xilinx Vivado, Intel Quartus Prime, SIMULINK}\\
+     \textbf{Hardware Tools}{: Oscilloscope, Spectrum Analyzer, Multimeter, Soldering, Power Supplies, STM MCU, Pynq Z2 FPGA, PIC MCU}\\
+     \textbf{Libraries}{: pandas, NumPy, Matplotlib}
+    }}
+ \end{itemize}
+
+
+%-------------------------------------------
+\end{document}
