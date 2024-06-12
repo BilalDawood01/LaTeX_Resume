@@ -143,7 +143,7 @@
 \begin{itemize}[leftmargin=0.15in, label={}]
    \small{\item{
     \textbf{Languages}{: Java, Python, C/C++, MATLAB, JavaScript, HTML/CSS, Assembly (ARM, MIPS), Verilog} \\
-    \textbf{Frameworks}{: React, Node.js, Flask, FastAPI, Tensorflow} \\
+    \textbf{Frameworks}{: React, Node.js, Flask, FastAPI, Tensorflow, PyTorch} \\
     \textbf{Developer Tools}{: Git, Gerrit, Linux, PuTTy, MS Azure, VS Code, PyCharm, Jira} \\
     \textbf{Design and Simulation}{: Cadence Allegro, MODELSIM, NI Multisim, PS:SE, Xilinx Vivado, Intel Quartus Prime, SIMULINK}\\
     \textbf{Hardware Tools}{: Oscilloscope, Spectrum Analyzer, Multimeter, Solder, Power Supplies, STM MCU, Pynq Z2 FPGA, PIC MCU}\\
@@ -151,54 +151,6 @@
     \textbf{Hobbies}{: Soccer, Badminton, Kick Boxing, Photography, Table Tennis}\\
    }}
 \end{itemize}
-
-
-
-\section{Key Courses}
-\begin{itemize}[leftmargin=0.05in, label={}]
-    \small{
-    % Electrical Engineering
-    \item \textbf{Electrical Engineering:}\\
-    \begin{itemize}[leftmargin=0.15in, label={}]
-        \item \textbf{Digital Circuits}{: Number systems, Boolean algebra, combinational and sequential circuits, counters, registers, and memory arrays.}\\
-        \item \textbf{Digital Systems Design}{: Digital system design and testing, programmable technology, CAD tools, and design for testability.}\\
-        \item \textbf{Digital Electronic Circuits}{: MOS transistor fundamentals, MOS logic gates, memory, and integrated circuit design.}\\
-        \item \textbf{Analog Electronic Circuits}{: BJT amplifiers, operational amplifier circuits, power amplifiers.}\\
-        \item \textbf{Circuits II}{: Laplace transforms, transfer functions, filter theory, transient responses, two-port circuits.}\\
-        \item \textbf{Electromagnetic Waves and Applications}{: Wave propagation, transmission line theory, scattering parameters, waveguides.}\\
-        \item \textbf{Power Systems Analysis}{: Power flow studies, stability, load frequency control, voltage control, power generation economics.}\\
-        \item \textbf{Electrical Engineering Energy Systems}{: Power generation, transmission, distribution, three-phase systems, power flow analysis.}\\
-        \item \textbf{Electronic Devices and Materials}{: Semiconductors, diodes, BJTs, MOSFETs, material properties.}\\
-    \end{itemize}
-    
-    % Software Engineering
-    \item \textbf{Software Engineering:}
-    \begin{itemize}[leftmargin=0.15in, label={}]
-        \item \textbf{Advanced Software Design and Development}{: Software modelling and design, object-oriented design, concurrent and database programming, systems integration.}\\
-        \item \textbf{Advanced Applied AI and ML}{: Data extraction and visualization, learning algorithms, neural network architectures.}\\
-        \item \textbf{Industrial IoT Systems and Data Analytics}{: IIoT fundamentals, digital frameworks, data analytics.}\\
-        \item \textbf{Cyber-Physical Systems Engineering}{: Design, reliability, performance, security of cyber-physical systems, FSM design.}\\
-        \item \textbf{Computer Organisation}{: CPU, memory, instruction sets, assembly language, virtual memory, I/O devices.}\\
-        \item \textbf{Application Specific Processors and Accelerators}{: RISC, CISC, application-specific processors, hardware/software optimization, hardware-software co-design.}\\
-    \end{itemize}
-    
-    % Telecommunications
-    \item \textbf{Telecommunications:}\\
-    \begin{itemize}[leftmargin=0.15in, label={}]
-        \item \textbf{Signals and Transforms}{: Continuous and discrete-time signals, Fourier and Z-transforms, sampling theory.}\\
-        \item \textbf{Communications Systems and Networks}{: Analog and digital communications, network protocol architectures, data/network security, performance analysis.}\\
-    \end{itemize}
-    
-    % Control Systems
-    \item \textbf{Control Systems:}\\
-    \begin{itemize}[leftmargin=0.15in, label={}]
-        \item \textbf{Control Systems I}{: Dynamic systems modeling, feedback control, transient and steady-state analysis, frequency response, compensation design.}\\
-    \end{itemize}
-    }
-\end{itemize}
-
-
-
 
     %%%%% Important Courses: 
   % Digital Things: 
@@ -248,6 +200,8 @@
       \resumeItemListStart
         \resumeItem{Achieved 70\% reduction in Thermal verification time by developing an automation tool using Python.} % python, automation, testing
         \resumeItem{Ensured accuracy by creating test cases and comparing recorded metrics manually with component datasheets.} %documentation, testing
+        % \resumeItem{Displayed proficiency in tkinter (GUI dev), pandas (data extraction and file processing), Pillow (Image Processing), numpy, Automation, Data Analysis, Excel Reporting}
+        % \resumeItem{Created test cases to verify and fix tool output, showcasing analytical and debugging skills.}
         \resumeItem{Showcased report writing and presentation skills by preparing user manual and presenting results to management.} % documentation, presentation
         \resumeItem{Ensured electrical functionality by verifying power rail integrity on high voltage radio boards using Power Tree and multimeter.} %hardware skill
         \resumeItem{Conducted board bring-up and verification by identifying and recording Flash SPI timing parameters using Oscilloscope.} % hardware skill
@@ -257,6 +211,18 @@
         \resumeItem{Took initiative to update and fix faulty spectrum analyzer by working directly with hardware vendor.}
         \resumeItem{Power Rail Analysis using Power Tree and measuring continuity across capacitors to ensure no shorts were created.}
         \resumeItem{Leading research on high-frequency testing equipment, targeting optimal performance and value by comparing price with datasheet specifications and testing requirements.}
+
+        % %%%%%%%%%%%%%%%%%%%%%%%%   Deep descriptions of thermal verification: %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+        % \resumeItem{Developed an advanced automation tool using Python, integrating multiple functionalities to streamline the analysis of component thermal characteristics and placements.}
+        % \resumeItem{Designed and implemented a graphical user interface (GUI) using `tkinter` to facilitate user inputs, including text files (placement files), CSV files (Bill of Materials), and images.}
+        % \resumeItem{Engineered data extraction and processing pipelines with `pandas`, efficiently reading and parsing component information from placement and BOM files.}
+        % \resumeItem{Utilized `Pillow` (PIL) and `numpy` for sophisticated image analysis, extracting RGB pixel values and assigning temperature values based on color coding.}
+        % \resumeItem{Integrated thermal analysis by comparing extracted pixel values with component thermal characteristics, automating the validation of components against their thermal specifications.}
+        % \resumeItem{Automated the organization and output of processed data into well-structured Excel files using `openpyxl` and `pandas`, enhancing data accessibility and reporting.}
+        % \resumeItem{Optimized image scaling and component mapping processes to ensure precise alignment and accurate thermal evaluation of each component.}
+        % \resumeItem{Ensured robust performance and reliability of the tool through extensive testing and validation of all processing stages, from file input to final Excel output.}
+        % \resumeItem{Enhanced productivity and accuracy in thermal analysis tasks, providing a comprehensive and user-friendly solution for component evaluation.}
+      
       \resumeItemListEnd
       
 % -----------Multiple Positions Heading-----------
@@ -274,7 +240,11 @@
       {Android SDK/NDK Full-Stack Developer (Intern)}{Feb 2023 -- Aug 2023}
       {Ericsson Canada Inc.}{Ottawa, ON}
       \resumeItemListStart
-        \resumeItem{Enhanced backend data management by 57\% for application by creating 4 new classes and off-loading 80\% of the data.}
+        \resumeItem{Joined the development and optimization of an Android app using JavaScript, React Native, C++, and C; managed tasks with Jira; and ensured code quality through continuous debugging processes with Gerrit and peer reviews.}
+        
+        \resumeItem{Boosted backend data management efficiency by 60\% via implementing 4 new classes and optimizing log outputs (Reduced unnecessary data logging and cleaned output formatting).}
+        % \resumeItem{Enhanced backend data management by 57\% for application by creating 4 new classes and off-loading 80\% of the data.}
+        
         \resumeItem{Increased UI functionality by incorporating filters.}
         % \resumeItem{Optimized app performance by reducing page load times by 90\% by replacing batch loading with infinite scrolling and removing redundant functions.}
         % \resumeItem{Reduced page load times by 90\% by optimizing app performance, showcasing expertise in software optimization.} % you can use this one or the one above.
@@ -334,7 +304,8 @@
         
         % \resumeItem{Realized 95\% license plate recognition accuracy by utilizing PaddleOCR for text detection and leveraging a cloud-based LPR API.}
         \resumeItem{Achieved 95\% license plate recognition accuracy using PaddleOCR and a cloud-based LPR API.} % more concise
-        
+
+        \resumeItem{Optimized YOLOv8 object tracking model through pruning and quantization, achieving 93\% mAP vehicle detection.}
         % \resumeItem{Achieved 93\% mAP vehicle and pedestrian detection by utilizing YOLOv8 object tracking model with data collected and labeled locally.}
         % \resumeItem{Designed and implemented SQLite database to store violation data and developed a graphical user interface for easy viewing and management of violations.}        
         \resumeItemListEnd
@@ -496,18 +467,18 @@
 
 %
 %-----------PROGRAMMING SKILLS-----------
-\section{Technical Skills}
- \begin{itemize}[leftmargin=0.15in, label={}]
-    \small{\item{
-     \textbf{Languages}{: Java, Python, C/C++, MATLAB, JavaScript, HTML/CSS, Assembly (ARM, MIPS), Verilog} \\
-     \textbf{Frameworks}{: React, Node.js, Flask, FastAPI, Tensorflow} \\
-     \textbf{Developer Tools}{: Git, Gerrit, Linux, PuTTy, MS Azure, VS Code, PyCharm, Jira} \\
-     \textbf{Design and Simulation}{: Cadence Allegro, MODELSIM, NI Multisim, PS:SE, Xilinx Vivado, Intel Quartus Prime, SIMULINK}\\
-     \textbf{Hardware Tools}{: Oscilloscope, Spectrum Analyzer, Multimeter, Solder, Power Supplies, STM MCU, Pynq Z2 FPGA, PIC MCU}\\
-     \textbf{Libraries}{: Pandas, NumPy, Matplotlib, Seaborn, Tkinter, Keras, OpenCV, Pillow, Scikit-learn}\\
-     \textbf{Hobbies}{: Soccer, Badminton, Kick Boxing, Photography, Table Tennis}\\
-    }}
- \end{itemize}
+% \section{Technical Skills}
+%  \begin{itemize}[leftmargin=0.15in, label={}]
+%     \small{\item{
+%      \textbf{Languages}{: Java, Python, C/C++, MATLAB, JavaScript, HTML/CSS, Assembly (ARM, MIPS), Verilog} \\
+%      \textbf{Frameworks}{: React, Node.js, Flask, FastAPI, Tensorflow, PyTorch} \\
+%      \textbf{Developer Tools}{: Git, Gerrit, Linux, PuTTy, MS Azure, VS Code, PyCharm, Jira} \\
+%      \textbf{Design and Simulation}{: Cadence Allegro, MODELSIM, NI Multisim, PS:SE, Xilinx Vivado, Intel Quartus Prime, SIMULINK}\\
+%      \textbf{Hardware Tools}{: Oscilloscope, Spectrum Analyzer, Multimeter, Solder, Power Supplies, STM MCU, Pynq Z2 FPGA, PIC MCU}\\
+%      \textbf{Libraries}{: Pandas, NumPy, Matplotlib, Seaborn, Tkinter, Keras, OpenCV, Pillow, Scikit-learn}\\
+%      \textbf{Hobbies}{: Soccer, Badminton, Kick Boxing, Photography, Table Tennis}\\
+%     }}
+%  \end{itemize}
 
  %-----------Awards-----------
 \section{Awards}
@@ -518,6 +489,48 @@
   \small{\item{
    \textbf{Jason Lang Scholarship}{(2020, 2021, 2023),} \textbf{Dean's List}{(2020, 2021, 2024)}
   }}
+\end{itemize}
+\section{Key Courses}
+\begin{itemize}[leftmargin=0.05in, label={}]
+    \small{
+    % Electrical Engineering
+    \item \textbf{Electrical Engineering:}\\
+    \begin{itemize}[leftmargin=0.15in, label={}]
+        \item \textbf{Digital Circuits}{: Number systems, Boolean algebra, combinational and sequential circuits, counters, registers, and memory arrays.}\\
+        \item \textbf{Digital Systems Design}{: Digital system design and testing, programmable technology, CAD tools, and design for testability.}\\
+        \item \textbf{Digital Electronic Circuits}{: MOS transistor fundamentals, MOS logic gates, memory, and integrated circuit design.}\\
+        \item \textbf{Analog Electronic Circuits}{: BJT amplifiers, operational amplifier circuits, power amplifiers.}\\
+        \item \textbf{Circuits II}{: Laplace transforms, transfer functions, filter theory, transient responses, two-port circuits.}\\
+        \item \textbf{Electromagnetic Waves and Applications}{: Wave propagation, transmission line theory, scattering parameters, waveguides.}\\
+        \item \textbf{Power Systems Analysis}{: Power flow studies, stability, load frequency control, voltage control, power generation economics.}\\
+        \item \textbf{Electrical Engineering Energy Systems}{: Power generation, transmission, distribution, three-phase systems, power flow analysis.}\\
+        \item \textbf{Electronic Devices and Materials}{: Semiconductors, diodes, BJTs, MOSFETs, material properties.}\\
+    \end{itemize}
+    
+    % Software Engineering
+    \item \textbf{Software Engineering:}
+    \begin{itemize}[leftmargin=0.15in, label={}]
+        \item \textbf{Advanced Software Design and Development}{: Software modelling and design, object-oriented design, concurrent and database programming, systems integration.}\\
+        \item \textbf{Advanced Applied AI and ML}{: Data extraction and visualization, learning algorithms, neural network architectures.}\\
+        \item \textbf{Industrial IoT Systems and Data Analytics}{: IIoT fundamentals, digital frameworks, data analytics.}\\
+        \item \textbf{Cyber-Physical Systems Engineering}{: Design, reliability, performance, security of cyber-physical systems, FSM design.}\\
+        \item \textbf{Computer Organisation}{: CPU, memory, instruction sets, assembly language, virtual memory, I/O devices.}\\
+        \item \textbf{Application Specific Processors and Accelerators}{: RISC, CISC, application-specific processors, hardware/software optimization, hardware-software co-design.}\\
+    \end{itemize}
+    
+    % Telecommunications
+    \item \textbf{Telecommunications:}\\
+    \begin{itemize}[leftmargin=0.15in, label={}]
+        \item \textbf{Signals and Transforms}{: Continuous and discrete-time signals, Fourier and Z-transforms, sampling theory.}\\
+        \item \textbf{Communications Systems and Networks}{: Analog and digital communications, network protocol architectures, data/network security, performance analysis.}\\
+    \end{itemize}
+    
+    % Control Systems
+    \item \textbf{Control Systems:}\\
+    \begin{itemize}[leftmargin=0.15in, label={}]
+        \item \textbf{Control Systems I}{: Dynamic systems modeling, feedback control, transient and steady-state analysis, frequency response, compensation design.}\\
+    \end{itemize}
+    }
 \end{itemize}
 
 %-------------------------------------------
