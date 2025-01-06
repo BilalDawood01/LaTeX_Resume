@@ -18,6 +18,7 @@
 \usepackage{fancyhdr}
 \usepackage[english]{babel}
 \usepackage{tabularx}
+\usepackage{lmodern} % Use the Latin Modern font with adjustable weights
 \input{glyphtounicode}
 
 
@@ -62,6 +63,7 @@
 
 %-------------------------
 % Custom commands
+\newcommand{\textsb}[1]{{\fontseries{sb}\selectfont #1}}
 \newcommand{\resumeItem}[1]{
   \item\small{
     {#1 \vspace{-2pt}}
@@ -117,32 +119,53 @@
     \href{https://linkedin.com/in/bilal-dawood-2021}{\underline{LinkedIn}} $|$
     \href{https://github.com/BilalDawood01}{\underline{Github}} $|$
     \href{mailto:bilaldawood099@outlook.com}{\underline{Email}} $|$
-\small{Calgary, AB} $|$ 
-\small{Canadian Citizen}
+    \small{Calgary, AB} % $|$ 
+    %%%%%%%%%%%% Print format %%%%%%%%%%%%%%%%
+    % \small bilaldawood099@outlook.com $|$ linkedin.com/in/bilal-dawood-2021 $|$ bilaldawood01.github.io
+% \small{Canadian Citizen}
+\end{center}
+
+%-----------PROFESSIONAL SUMMARY-----------
+
+\begin{center}
+  \vspace{-5pt}
+  \small{\emph{Enthusiastic Electrical Engineer with experience in embedded systems, digital hardware, and automation, showcasing a track record of developing innovative solutions to complex technical challenges.}}
+  % \small{Motivated Electrical Engineer with a passion for taking on complex technical challenges and continuously expanding expertise across hardware and software domains, demonstrating consistent success in developing innovative engineering solutions.}  
+  \vspace{-12pt}
 \end{center}
 
 
 %-----------EDUCATION-----------
 \section{Education}
 \resumeSubHeadingListStart
-  % \resumeSubheading
-  %   {University of Calgary}{Calgary, AB}
-  %   {MSc in Civil Engineering, Spec. Transportation Engineering}{Sept. 2024 --  Aug. 2025}
+  \resumeSubheading
+    {University of Calgary}{Calgary, AB}
+    {MSc in Transportation Engineering}{Sep. 2024 -- Present}
+    \begin{itemize}[leftmargin=0.0in, label={}]
+      \small{\item{
+        % \textbf{Publications:}{ Dawood, B., Saidi, S., "A Cost-efficient Framework for Automated Enforcement of Bus-only Lanes and Crossings." Presentation at the TRB Annual Meeting}\\
+        \textbf{Coursework:}{ Advanced Analysis and Modeling of Public Transit Systems, Data Mining and Machine Learning}}}   % Integrated Infrastructure for Sustainable Cities, Instrumentation, Automation, Process Control
+    \end{itemize}
+    \vspace{-5pt}
     
     \resumeSubheading
       {University of Calgary}{Calgary, AB}
       {BSc in Electrical Engineering, Minor in Digital Engineering | GPA: 3.64}{Aug. 2019 -- May 2024}
-  %  \resumeSubheading
-  %    {Blinn College}{Bryan, TX}
-   %   {Associate's in Liberal Arts}{Aug. 2014 -- May 2018}
 
    %%%%%%%% Relavent Coursework
    \begin{itemize}[leftmargin=0.0in, label={}]
     \small{\item{
-     \textbf{Coursework:}{ Analog Electronic Circuits, Digital Electronic Circuits, Electrical Engineering Energy Systems}}}
+    %  \textbf{Coursework:}{ Digital Systems Design, Advanced Software Design and Development, Analog Electronic Circuits}}}            % Digital/Hardware/Analog/Embedded Stream
+    %  \textbf{Coursework:}{ Power Systems Analysis, Industrial IoT Systems and Data Analytics, Control Systems I}}}                    % Power Systems, Energy Analyst, Power Electronics
+     \textbf{Coursework:}{ Control Systems I, Cyber-Physical Systems Engineering, Power Systems Analysis}}}                           % Instrumentation, Automation, Process Control
+    %  \textbf{Coursework:}{ Analog Electronic Circuits, Signals and Transform, Intro to Communications Systems and Networks}}}         % Telecommunications 
+    %  \textbf{Coursework:}{ Cyber-Physical Systems Engineering, Digital Systems Design, Industrial IoT Systems and Data Analytics}}}   % Electrical Engineering
+    %  \textbf{Coursework:}{ Advanced SW Design and Development, Advanced Applied AI and ML, Industrial IoT Systems and Data Analytics}}} % Software
     %  \textbf{Awards}:{ \emph{Jason Lang Scholarship} (2020, 2021, 2023), \emph{Dean's List} (2020, 2021, 2024)}
   \end{itemize}
   \resumeSubHeadingListEnd
+  \vspace{-9pt}
+
 
   %-----------PROGRAMMING SKILLS----------- when CV ONLYYY
 % \section{Technical Skills}
@@ -201,26 +224,89 @@
   \resumeSubHeadingListStart
 
     \resumeSubheading
-      {Digital Hardware Engineer (Intern)}{May 2022 -- Aug 2023}
+    {Systems Engineer and Researcher}{Sep 2023 -- Present}
+    {University of Calgary}{Calgary, AB}
+    \resumeItemListStart
+      % \resumeItem{Designed and developed automated bus lane enforcement system using RPi, sensors and YOLOv8 ML, improving transit safety and efficiency.} % more concise than the one below
+      \resumeItem{Led the design and development of a \textbf{Linux} based Automated Enforcement System (\textbf{AES}) for bus-only lanes, integrating hardware and ML model to enhance public safety and optimize transit operations.}
+      % \resumeItem{Improved transit efficiency by 13\% by leading the hardware and software design and implementation of an automated enforcement prototype for Calgary Transit, utilizing multiple hardware components and integrating embedded design with object-tracking model.}
+      % \resumeItem{Developed a hardware \textbf{block diagram} for AES, outlining the integration and use of various components.} % hardware sourcing, designing and planning, control systems. 
+      % \resumeItem{Developed a hardware block diagram and design roadmap to guide progress of automation tool and outline requirements.} % hardware sourcing, designing and planning. 
+      % \resumeItem{Led hardware and software design of automated enforcement prototype for Calgary Transit, improving transit efficiency by 8\%.}
+      % \resumeItem{Created a comprehensive hardware block diagram, detailing the integration and use of various components, ensuring system coherence.}
+      % \resumeItem{Conducted research for component selection based on literature, electric ratings, and cost while ensuring functionality and compatability.}
+      \resumeItem{Conducted \textbf{research} for component selection based on literature, electric ratings, and cost while ensuring functionality.}
+
+
+      % The one below is 2 bullet points in one. 
+      % \resumeItem{Reduced power consumption by 36\% and memory utilization by 800\% by reading serial data from sensors (LiDAR, GPS, camera) and implementing efficient triggers with a \textbf{Python script} on an RPi running Linux.} % option 4 - longer description with more serial reading info
+      % \resumeItem{Reduced power consumption by 36\% by developing a proof-of-concept with RPi and integrating LiDAR/GPS sensors through serial connections and GPIO pins} % alternative 2
+      \resumeItem{Achieved \textbf{36\% reduction in power consumption} by embedded programming and sensor integration using \textbf{Python}.}
+      \resumeItem{Read, decoded and utilized serial data from LiDAR sensor and GPS receiver using \textbf{Python}. }
+      % \resumeItem{Integrated hardware components with software server, ensuring smooth data transfer and system operation.}               % hardware skill
+      % \resumeItem{Designed multi-purpose \textbf{hardware enclosure} using \textbf{SOLIDWORKS} for both in-bus and on-street application.}  % hardware skill
+      % \resumeItem{Performed extensive \textbf{testing} to ensure system reliability and performance under various conditions.}              % hardware skill
+      % \resumeItem{Regularly shared progress with Calgary Transit, explaining technical details in easy to understand manner, showcasing strong oral and written \textbf{communication skills}.}
+      % \resumeItem{Prepared documentation outlining \textsb{technical specifications}, performance and actionable insights for future implementation.}
+
+      
+      % \resumeItem{Realized 95\% license plate recognition accuracy by utilizing PaddleOCR for text detection and leveraging a cloud-based LPR API.}
+      % \resumeItem{Achieved 95\% license plate recognition accuracy using PaddleOCR and a cloud-based LPR API.} % more concise
+
+      % \resumeItem{Optimized YOLOv8 \textsb{object tracking model} through \textsb{pruning} and \textsb{quantization}, achieving \textbf{93\% mAP} vehicle detection.}
+      % \resumeItem{Achieved 93\% mAP vehicle and pedestrian detection by utilizing YOLOv8 object tracking model with data collected and labeled locally.}
+      % \resumeItem{Designed and implemented SQLite database to store violation data and developed a graphical user interface for easy viewing and management of violations.}  
+    \resumeItemListEnd
+
+    \resumeSubheading
+      {Android SDK/NDK Full-Stack Developer (Intern)}{Feb 2023 -- Aug 2023}
+      {Ericsson Canada Inc.}{Ottawa, ON}
+      \resumeItemListStart
+        \resumeItem{Developed and optimized an Android app using \textbf{JavaScript, React Native and C/C++}} %managed tasks with Jira; and ensured code quality through continuous debugging processes with Gerrit and peer reviews.}
+        % \resumeItem{Developed and optimized an Android app using JavaScript, React Native, C++, and C.}
+        % \resumeItem{Managed tasks with Jira and ensured code quality through continuous debugging and peer reviews using Gerrit.}
+        % \resumeItem{Boosted backend data management efficiency by 60\% by implementing 4 new classes and optimizing log outputs (Reduced unnecessary data logging and cleaned output formatting).}
+        \resumeItem{Enhanced backend data management by \textbf{57\%} for app by creating 4 new classes in \textbf{JS} and off-loading 80\% of the data.}
+        % \resumeItem{Increased UI functionality by incorporating filters (date, blueprint name, indoor/outdoor, location).}
+        % \resumeItem{Optimized app performance by reducing page load times by 90\% by replacing batch loading with infinite scrolling and removing redundant functions.}
+        % \resumeItem{Reduced page load times by 90\% by optimizing app performance, showcasing expertise in software optimization.} % you can use this one or the one above.
+        \resumeItem{Reduced page load times by \textbf{90\%} by implementing \textbf{infinite scrolling}, showcasing expertise in software optimization.} % you can use this one or the one above
+        % \resumeItem{Collected and analyzed 5G performance metrics using Qualcomm Network Testing Device, contributing to app development.}
+        % \resumeItem{Collected and analyzed 5G performance metrics (throughput, error rate) contributing to app development.}
+      \resumeItemListEnd
+
+
+
+    \resumeSubheading
+      {Digital Hardware Engineer (Intern)}{May 2022 -- Feb 2023}
       {Ericsson Canada Inc}{Ottawa, ON}
       \resumeItemListStart
-        \resumeItem{Verified digital circuit designs using Cadence Allegro, leveraging existing radio board schematics.} % schematic designing
-        \resumeItem{Achieved 70\% reduction in Thermal verification time by designing and developing a derating automation tool in Python.} % python, automation, testing
-        % \resumeItem{Ensured accuracy by creating comprehensive test cases and comparing recorded metrics with component datasheets for 6000+ components.} %documentation, testing
+        % \resumeItem{Verified digital circuit designs using Cadence Allegro, leveraging existing radio board schematics.} % schematic designing. not really good. Too vague
+
+        %%%%%%%%%%  THERMAL TOOL EXPLANATIONS %%%%%%%%%%%%%%%%%%%%
+        \resumeItem{Achieved \textbf{70\% reduction} in thermal verification time by developing an automation tool in \textbf{Python}.} % python, automation, testing
+        \resumeItem{Ensured accuracy of automation tool by \textbf{debugging} and creating  \textbf{test cases} and recording results using \textbf{Excel}.}%comparing recorded metrics with component datasheets} % for 6000+ components.} %documentation, testing
+        % \resumeItem{Ensured accuracy by creating various test cases and utilizing component datasheets for 6000+ components.} %documentation, testing
         % \resumeItem{Integrated thermal analysis by comparing extracted pixel values with component thermal characteristics.}
         % \resumeItem{Displayed proficiency in tkinter (GUI dev), pandas (data extraction and file processing), Pillow (Image Processing), numpy, Automation, Data Analysis, Excel Reporting}
-        \resumeItem{Created test cases to verify and debug tool output, showcasing analytical and debugging skills.}
+        % \resumeItem{Created test cases to verify and debug tool output, showcasing analytical and debugging skills.}
         % \resumeItem{Demonstrated strong communication skills by preparing a detailed user manual and presenting results to management, receiving positive feedback.} % documentation, presentation
-        \resumeItem{Delivered technical presentation to hardware teams, leading to successful company-wide tool adoption.}
+        % \resumeItem{Delivered presentation to hardware teams, leading to successful company-wide tool adoption.}
+        % board bring up, hardware validation NEW PRODUCT DESIGN
 
-        % \resumeItem{Ensured electrical functionality by conducting Power Rail Analysis, verifying power rail integrity on high voltage radio boards using a multimeter, and performing technical calculations to ensure compliance with regulations.} % combined two bullet points
+        %%%%%%%%% HARDWARE STUFF - Include board bring up at some point. %%%%%%%%%%%%%%%%%%%%
+        % \resumeItem{Verified digital circuit design using \textbf{Cadence Allegro} to analyze schematics and locate testing points.}
+        % \resumeItem{Utilized circuit schematic from \textbf{Cadence Allegro} to verify signal integrity of digital section on radio boards}
+        \resumeItem{Verified \textbf{signal integrity} and \textbf{timing compliance} of I/O operations on radio boards by utilizing \textbf{Cadence schematics}, sending commands via \textbf{PuTTY}, and recording \textbf{oscilloscope measurements}.}
+        % \resumeItem{Ensured electrical functionality by conducting Power Rail Analysis, by verifying power rail integrity on high voltage radio boards (located using Cadence Allegro and measured using a multimeter) to ensure compliance with regulations.}%and performing technical calculations to ensure compliance with regulations.} % combined two bullet points
         % \resumeItem{Conducted Power Rail Analysis using Power Tree and by performing technical calculations to ensure compliance with regulations.}
-        \resumeItem{Ensured electrical functionality by verifying power rail integrity on high voltage radio boards using multimeter.} %hardware skill
+        % \resumeItem{Ensured \textbf{electrical functionality} by conducting \textbf{power rail analysis} on high voltage radio boards using \textbf{multimeter}.} %hardware skill
 
         % \resumeItem{Conducted board electrical verification, accurately identifying and recording 8 Flash timing parameters using Oscilloscope.} % hardware skill
         % \resumeItem{Confirmed data transfer compliance by identifying and recording Flash SPI interface timing parameters using Oscilloscope.}
-        \resumeItem{Hands-on experience with UART, JTAG, I2C and SPI protocols on Ericsson radio boards.} %hardware peripherals
-        \resumeItem{Verified signal integrity and timing on radio boards using oscilloscope and PuTTY, ensuring digital circuit performance met design specifications.}
+        % \resumeItem{Hands-on experience with Ethernet, UART, JTAG, I2C and SPI protocols on Ericsson radio boards.} %hardware peripherals
+        % \resumeItem{Verified signal integrity and timing parameters on radio boards using oscilloscope and PuTTY, ensuring digital circuit met SPI design specifications.}
+
         % \resumeItem{Took initiative to update and fix faulty spectrum analyzer by working directly with hardware vendor.}
         % \resumeItem{Led research on high-frequency testing equipment, targeting optimal performance and value by comparing price with datasheet specifications and testing requirements.}
 
@@ -236,248 +322,254 @@
         % \resumeItem{Enhanced productivity and accuracy in thermal analysis tasks, providing a comprehensive and user-friendly solution for component evaluation.}
       
       \resumeItemListEnd
-      
-% -----------Multiple Positions Heading-----------
-%    \resumeSubSubheading
-%     {Software Engineer I}{Oct 2014 - Sep 2016}
-%     \resumeItemListStart
-%        \resumeItem{Apache Beam}
-%          {Apache Beam is a unified model for defining both batch and streaming data-parallel processing pipelines}
-%     \resumeItemListEnd
-%    \resumeSubHeadingListEnd
-%-------------------------------------------
 
+  
+    %   \resumeSubheading
+    %  {Treasurer (Volunteer)}{Aug 2020 -- May 2022}
+    %  {IEEE UofC Student Branch Executive Council}{Calgary, AB}
+    %  \resumeItemListStart
+    %    \resumeItem{Managed and maintained branch accounts for professional associations.}
+    %   %  \resumeItem{Prepared and submitted Annual Budget reports and Financials.}
+    %    \resumeItem{Developed financial strategies, ensured suitable funding for events, and advised on activity cost allocation.}
+    %    \resumeItem{Presented data in a methodical format in front of other executive council members, demonstrating analytical thinking and proactive communication skills.}
+    %  \resumeItemListEnd
 
-    \resumeSubheading
-      {Android SDK/NDK Full-Stack Developer (Intern)}{Feb 2023 -- Aug 2023}
-      {Ericsson Canada Inc.}{Ottawa, ON}
-      \resumeItemListStart
-        % \resumeItem{Joined the development and optimization of an Android app using JavaScript, React Native, C++, and C; managed tasks with Jira; and ensured code quality through continuous debugging processes with Gerrit and peer reviews.}
-        \resumeItem{Developed and optimized an Android app using JavaScript, React Native, C++, and C.}
-        \resumeItem{Managed tasks with Jira and ensured code quality through continuous debugging and peer reviews using Gerrit.}
-        % \resumeItem{Boosted backend data management efficiency by 60\% by implementing 4 new classes and optimizing log outputs (Reduced unnecessary data logging and cleaned output formatting).}
-        % \resumeItem{Enhanced backend data management by 57\% for application by creating 4 new classes and off-loading 80\% of the data.}
-        % \resumeItem{Increased UI functionality by incorporating filters (date, blueprint name, indoor/outdoor, location).}
-        % \resumeItem{Optimized app performance by reducing page load times by 90\% by replacing batch loading with infinite scrolling and removing redundant functions.}
-        % \resumeItem{Reduced page load times by 90\% by optimizing app performance, showcasing expertise in software optimization.} % you can use this one or the one above.
-        \resumeItem{Reduced page load times by 90\% by implementing infinite scrolling, showcasing expertise in software optimization.} % you can use this one or the one above
-        \resumeItem{Collected and analyzed 5G performance metrics using Qualcomm Network Testing Device, contributing to app development.}
-        \resumeItem{Collected and analyzed 5G performance metrics (throughput, error rate) contributing to app development.}
-      \resumeItemListEnd
+    %   \resumeSubheading
+    %   {Electrical Team Lead (Volunteer)}{Sep 2021 -- Sep 2022}
+    %   {Team Zeus}{Calgary, AB}
+    %   \resumeItemListStart
+    %     \resumeItem{Team Zeus}
+    %     \resumeItem{Collaborated with other technical teams to integrate electrical systems into the vehicle.}
+    %     \resumeItem{Performed multiple drafting tasks and ensured synchronous data-keeping for all electrical sub-teams.}
+    %     % \resumeItem{Assisted in designing and testing Battery Management System (BMS) and Electrical Control Unit (ECU).}
+    %     %  \resumeItem{Applied practical experience in developing and testing Power Distribution Units (PDUs).}
+    %     \resumeItem{Gained an understanding of principles of bike operation and learned about workshop safety practices.}
+    %  \resumeItemListEnd
 
   \resumeSubHeadingListEnd
 
 % %-----------LEADERSHIP EXPERIENCE-----------
-\section{Leadership Experience}
- \resumeSubHeadingListStart
+% \section{Leadership Experience}
+%  \resumeSubHeadingListStart
 
-   \resumeSubheading
-     {Treasurer}{Aug 2020 -- May 2022}
-     {IEEE UofC Student Branch Executive Council}{Calgary, AB}
-     \resumeItemListStart
-       \resumeItem{Managed and maintained branch accounts for professional associations.}
-       \resumeItem{Prepared and submitted Annual Budget reports and Financials.}
-       \resumeItem{Developed financial strategies, ensured suitable funding for events, and advised on activity cost allocation.}
-       \resumeItem{Presented data in a methodical format in front of other executive council members, demonstrating analytical thinking and proactive communication skills.}
-     \resumeItemListEnd
+  %  \resumeSubheading
+  %    {Treasurer}{Aug 2020 -- May 2022}
+  %    {IEEE UofC Student Branch Executive Council}{Calgary, AB}
+  %    \resumeItemListStart
+  %      \resumeItem{Managed and maintained branch accounts for professional associations.}
+  %      \resumeItem{Prepared and submitted Annual Budget reports and Financials.}
+  %      \resumeItem{Developed financial strategies, ensured suitable funding for events, and advised on activity cost allocation.}
+  %      \resumeItem{Presented data in a methodical format in front of other executive council members, demonstrating analytical thinking and proactive communication skills.}
+  %    \resumeItemListEnd
 
-    \resumeSubheading
-      {Electrical Team Lead}{Sept 2021 -- Sept 2022}
-      {Team Zeus}{Calgary, AB}
-      \resumeItemListStart
-        \resumeItem{Developed comprehensive and easily comprehendible documents for modifications on an electric motorcycle.}
-        \resumeItem{Collaborated with other technical teams to integrate electrical systems into the vehicle.}
-        \resumeItem{Performed multiple drafting tasks and ensured synchronous data-keeping for all electrical sub-teams.}
-        \resumeItem{Assisted in designing and testing Battery Management System (BMS) and Electrical Control Unit (ECU).}
-        %  \resumeItem{Applied practical experience in developing and testing Power Distribution Units (PDUs).}
-        \resumeItem{Gained an understanding of principles of bike operation and learned about workshop safety practices.}
-     \resumeItemListEnd
- \resumeSubHeadingListEnd
+%    \resumeSubheading
+%      {Electrical Team Lead}{Sep 2021 -- Sep 2022}
+%      {Team Zeus}{Calgary, AB}
+%      \resumeItemListStart
+%        \resumeItem{Developed comprehensive and easily comprehendible documents for modifications on an electric motorcycle.}
+%        \resumeItem{Collaborated with other technical teams to integrate electrical systems into the vehicle.}
+%        \resumeItem{Performed multiple drafting tasks and ensured synchronous data-keeping for all electrical sub-teams.}
+%        \resumeItem{Assisted in designing and testing Battery Management System (BMS) and Electrical Control Unit (ECU).}
+%       %  \resumeItem{Applied practical experience in developing and testing Power Distribution Units (PDUs).}
+%        \resumeItem{Gained an understanding of principles of bike operation and learned about workshop safety practices.}
+%      \resumeItemListEnd
+%  \resumeSubHeadingListEnd
 
 %-----------PROJECTS-----------
-\section{Projects}
+\section{Projects and Courses}
     \resumeSubHeadingListStart
-      \resumeProjectHeading
-      {\textbf{Automated Transit Enforcement} $|$ \emph{Python, Git, Software Dev, Hardware Dev, OpenCV}}{Sept 2023 -- May 2024}
-      \resumeItemListStart
-        \resumeItem{Led the design and development of an automated enforcement system for bus-only lanes, integrating embedded hardware (Raspberry Pi, GPS, LiDAR) and machine learning (YOLOv8) to enhance public safety and optimize transit operations.}
-        % \resumeItem{Improved transit efficiency by 13\% by leading the hardware and software design and implementation of an automated enforcement prototype for Calgary Transit, utilizing multiple hardware components and integrating embedded design with object-tracking model.}
-        % \resumeItem{Developed a comprehensive hardware block diagram for automated enforcement device outline the integration and use of various components.} % hardware sourcing, designing and planning. 
-        % \resumeItem{Led hardware and software design of automated enforcement prototype for Calgary Transit, improving transit efficiency by 8\%.}
-        % \resumeItem{Created a comprehensive hardware block diagram, detailing the integration and use of various components, ensuring system coherence.}
-        \resumeItem{Conducted research for component selection based on literature, electric ratings, and cost while ensuring functionality and compatability.}
-
-        % The one below is 2 bullet points in one. 
-        % \resumeItem{Reduced power consumption by 36\% and memory utilization by 800\% by implementing efficient triggers for sensors (LiDAR, GPS, camera) using a Python script on an RPi running Linux.} % option 3
-        % \resumeItem{Reduced power consumption by 36\% and memory utilization by 800\% by reading serial data from sensors (LiDAR, GPS, camera) and implementing efficient triggers with a Python script on an RPi running Linux.} % option 4 - longer description with more serial reading info
-        % \resumeItem{Reduced power consumption by 36\% by developing a hardware proof-of-concept with Raspberry Pi and sensors (LiDAR, GPS, camera) to trigger recordings on Linux interface, which was transmitted and stored on the server.} % alternative 1
-        % \resumeItem{Reduced power consumption by 36\% by developing a proof-of-concept with RPi and integrating LiDAR/GPS sensors through serial connections and GPIO pins} % alternative 2
-        \resumeItem{Achieved a 36\% reduction in power consumption through embedded programming and sensor integration.}
-        % \resumeItem{Reduced memory utilization and processing time by 800\% by setting appropriate triggers through embedded designing}
-        % \resumeItem{Integrated hardware components with software server, ensuring smooth data transfer and system operation.} % hardware skill
-        \resumeItem{Designed multi-purpose hardware enclosure using SOLIDWORKS for both in-bus and on-street application.}
-        \resumeItem{Performed extensive testing to ensure system reliability and performance under various conditions.} % hardware skill
-        \resumeItem{Regularly shared progress with Calgary Transit, explaining technical details in easy to understand manner, showcasing strong oral and written communication skills.}
-        \resumeItem{Prepared documentation outlining technical specifications, system performance and actionable insights for future implementation.}
     
-        
-        % \resumeItem{Realized 95\% license plate recognition accuracy by utilizing PaddleOCR for text detection and leveraging a cloud-based LPR API.}
-        % \resumeItem{Achieved 95\% license plate recognition accuracy using PaddleOCR and a cloud-based LPR API.} % more concise
-
-        % \resumeItem{Optimized YOLOv8 object tracking model through pruning and quantization, achieving 93\% mAP vehicle detection.}
-        % \resumeItem{Achieved 93\% mAP vehicle and pedestrian detection by utilizing YOLOv8 object tracking model with data collected and labeled locally.}
-        % \resumeItem{Designed and implemented SQLite database to store violation data and developed a graphical user interface for easy viewing and management of violations.}        
+    \resumeProjectHeading
+        {\textbf{Modelling On-Demand Transit with TSP} $|$ \emph{Python, Analysis, Data Visualization, Simulations}}{Sept 2024 -- Dec 2024}
+        \resumeItemListStart
+        \resumeItem{Built a Python-based simulator to generate and analyze the cost of on-demand transit routes using Calgary's road network.}
+        \resumeItem{Provided data-driven insights for optimizing urban transit planning by developing visualizations and conducting statistical analyses to find the relationship between road network designs and transit efficiency} %, providing data-driven insights for urban transit planning.}
+          % \resumeItem{Conducted 900+ simulations for 8 transit stations with unique road network design under various conditions.}
+          % \resumeItem{Provided insights on how grid and curvilinear street patterns impact transit efficiency, aligning my findings with recent literature.}
+          % \resumeItem{Proposed a cost-to-network style model for informed decisiion making, by analyzing the relationship between network design and operational efficiency.}
         \resumeItemListEnd
 
-        \resumeProjectHeading
-        {\textbf{Real-time Audio Filtering} $|$ \emph{C, ARM Assembly, STM MCU, Embedded Systems}}{Jan 2024 -- May 2024}
+      \resumeProjectHeading
+        {\textbf{Real-time Audio Filtering} $|$ \emph{C, ARM Assembly, Cortex-M4, Embedded Systems}}{Jan 2024 -- May 2024}
         \resumeItemListStart
-          \resumeItem{Designed and implemented embedded real-time audio filter on the STM32F411 using C and ARM Assembly.}
-          \resumeItem{Reduced filter sampling rate by 28\% and reduced program size by 13.6\% by utilizing optimization techniques involving block processing and use of ARM Assembly.}
-          \resumeItem{Utilized Direct Memory Access (DMA) to efficiently load and verify audio files on MCU, ensuring accurate data extraction and processing.}
-          \resumeItem{Implemented and compared various FIR filtering techniques (Circular Buffer, Block Processing).}
-          \resumeItem{Compared performance (speed, memory usage) and verified integrity of filter using Python Notebook.}
-          \resumeItem{Implemented Loop Unrolling and utilized architecture-specific SIMD instructions to meet audio timing requirements.}
+          \resumeItem{Designed and optimized embedded \textbf{real-time audio filter} on the STM32F411 using \textbf{C and ARM Assembly}.}
+          \resumeItem{Reduced filter sampling rate by \textbf{28}\% and reduced program size by \textbf{13.6\%} by utilizing \textbf{Assembly and buffers}.}%optimization techniques.}
+          % \resumeItem{Met 8KHz timing constraints for optimized functions, ensuring suitability for real-time applications.}
+          \resumeItem{Analyzed \textbf{ARM assembly} to identify bottlenecks and \textbf{optimize code} efficiency, reducing instruction count.}
+          % \resumeItem{Utilized Direct Memory Access (DMA) to load audio files on MCU for data extraction and processing.}
+          % \resumeItem{Implemented and compared various FIR filtering techniques (Circular Buffer, Block Processing).}
+          % \resumeItem{Analyzed and compared performance (speed/memory usage) and verified filter integrity using Python Notebook.}
+          % \resumeItem{Implemented Loop Unrolling and utilized architecture-specific instructions to meet audio timing requirements.}
           % \resumeItem{Created Python notebook to verify integrity of signal after filtering.}
-        \resumeItemListEnd
-        
-        \resumeProjectHeading
-        {\textbf{2D Image Convolution} $|$ \emph{C, Python, STM MCU, ARM Cortex-M4, DSP, Embedded Systems}}{Jan 2024 -- May 2024}
-        \resumeItemListStart
-          \resumeItem{Implemented various 2D Image filtering techniques using 3x3 kernels on STM32F411 using C.}
-          \resumeItem{Loaded images to STM Microcontroller as binary file. Utilized convolution techniques to filter images.}
-          % \resumeItem{Paid close attention to data access and boundary handling for image convolution.}
-          \resumeItem{Displayed expertise with memory mapping by paying close attention to data access and boundary handling for image convolution.}
-          \resumeItem{Implemented and observed the affect of various 3x3 kernels (edge filter, gaussian blur, sharpening).}
-          \resumeItem{Created Python notebook to view images by decrypting binary file.}
-          \resumeItem{Demonstrated expertise in digital signal processing and embedded systems.}
-        \resumeItemListEnd
+      \resumeItemListEnd
 
-        \resumeProjectHeading
-        {\textbf{Hardware Accelerator (Pynq-Z2 FPGA)} $|$ \emph{C, Xilinx Vitis HLS, FPGA, Python}}{Jan 2024 -- May 2024}
-        \resumeItemListStart
-          \resumeItem{Utilized AMD Xilinx Vitis High-Level-Synthesis (HLS) to build, synthesize and debug C code.}
-          \resumeItem{Generated RTL designs and ensured proper resource utilization.}
-          \resumeItem{Implemented hardware optimization techniques to improve performance of MAC operations on FPGA.}
-          \resumeItem{Demonstrated proficiency with Loop Unrolling, Loop Fission and Pipelining optimization techniques on hardware.}
-          \resumeItem{Conducted thorough testing and validation procedures using testbenches created in C as well as through C simulation and synthesis, to ensure functionality and performance of operations.}
-          \resumeItem{Analyzed synthesis reports and utilized pragma directives to optimize loop latency, resource utilization and overall performance of hardware design.}
-          \resumeItem{Contributed to the development of optimized hardware accelerators, enhancing processing efficiency and throughput for FPGA-based applications.}
-          \resumeItem{Achieved 13\%-time reduction verified by exporting IP and generating bit-files to flash bitstreams to FPGA via Python notebook.}
-        \resumeItemListEnd
+        % \resumeProjectHeading
+        % {\textbf{2D Image Convolution} $|$ \emph{C, Python, STM MCU, ARM Cortex-M4, DSP, Embedded Systems}}{Jan 2024 -- May 2024}
+        % \resumeItemListStart
+        %   \resumeItem{Implemented 2D Image filtering techniques using 3x3 kernels on STM32F411 using C.}
+        %   \resumeItem{Loaded images to STM uC as binary file. Utilized convolution techniques to filter images.}
+        %   % \resumeItem{Displayed detail-oriented attidude by paying close attention to data access and boundary handling for image convolution.}
+        %   % \resumeItem{Displayed expertise with memory mapping by paying close attention to data access and boundary handling for image convolution.}
+        %   % \resumeItem{Implemented and observed the affect of various 3x3 kernels (edge filter, gaussian blur, sharpening).}
+        %   \resumeItem{Created Python notebook to verify filtered images by decrypting binary file.}
+        %   \resumeItem{Demonstrated expertise in \textbf{digital signal processing} and embedded systems.}
+        % \resumeItemListEnd
 
-        \resumeProjectHeading
-        {\textbf{SolarCam} $|$ \emph{Embedded Systems, Solar Powered, C++}}{Jan 2022 -- May 2022}
-        \resumeItemListStart
-          \resumeItem{Developed an ESP32-microcontroller based solar powered security camera.}
-          \resumeItem{Successfully sourced and integrated electrical components including solar panels, ESP32, PIR sensor, and camera module.}
-          \resumeItem{Controlled GPIO pins using C++ to capture and save images.}
-          \resumeItem{Designed a self-sustaining power system with solar charging, battery storage, and regulated voltage.}
-          \resumeItem{Ensured adherence to relevant regulatory codes (ISO, CEC) for product quality, safety, and environmental considerations.}
-        \resumeItemListEnd
+        % \resumeProjectHeading
+        % {\textbf{Hardware Accelerator (Pynq-Z2 FPGA)} $|$ \emph{C, Xilinx Vitis HLS, FPGA, Python}}{Jan 2024 -- May 2024}
+        % \resumeItemListStart
+        %   \resumeItem{Utilized AMD Xilinx Vitis High-Level-Synthesis (HLS) to develop a hardware accelerator on the PYNQ-Z2 FPGA using C.}
+        %   % \resumeItem{Synthesized and debugged C code to generate RTL designs and ensure proper resource utilization.}
+        %   \resumeItem{Achieved 13\% time reduction by implementing hardware optimization techniques (loop unrolling/fission/pipelining) to improve hardware performance of MAC operations on FPGA.}
+        %   % \resumeItem{Demonstrated proficiency with Loop Unrolling, Loop Fission and Pipelining optimization techniques on hardware.}
+        %   \resumeItem{Conducted thorough testing and validation procedures using testbenches created in C as well as through C simulation and synthesis, to ensure functionality and performance of operations.}
+        %   % \resumeItem{Analyzed synthesis reports and utilized pragma directives to optimize loop latency, resource utilization and overall performance of hardware design.}
+        %   % \resumeItem{Contributed to the development of optimized hardware accelerators, enhancing processing efficiency and throughput for FPGA-based applications.}
+        %   % \resumeItem{Achieved 13\%-time reduction verified by exporting IP and generating bit-files to flash bitstreams to FPGA via Python notebook.}
+        % \resumeItemListEnd
+
+        % \resumeProjectHeading
+        % {\textbf{SolarCam} $|$ \emph{Embedded Systems, Solar Powered, C++}}{Jan 2022 -- May 2022}
+        % \resumeItemListStart
+        %   \resumeItem{Developed an \textbf{ESP32-microcontroller} based solar powered security camera.}
+        %   % \resumeItem{Successfully sourced and integrated electrical components including solar panels, ESP32, PIR sensor, and camera module.}
+        %   % \resumeItem{Controlled GPIO pins using C++ to capture and save images.}
+        %   \resumeItem{Designed a self-sustaining power system with solar charging, battery storage, and regulated voltage.}
+        %   \resumeItem{Ensured adherence to relevant regulatory codes (ISO, CEC) for product quality, safety, and environmental considerations.}
+        % \resumeItemListEnd
         
         \resumeProjectHeading
         {\textbf{Deep learning Finger Digit Classifier GUI} $|$ \emph{Python, Machine Learning, GUI, Data Visualization}}{Jan 2022 -- May 2022}
         \resumeItemListStart
-          \resumeItem{Developed a finger digits classifier with fastai and a CNN, achieving a significant accuracy boost from 60\% to 88\%.}
+          \resumeItem{Developed a real-time finger digits classifier with fastAI and a CNN, achieving an \textbf{accuracy of 88\%}.}
           \resumeItem{Employed data augmentation techniques to enhance real-time finger count prediction accuracy.}
-          \resumeItem{Proficiently managed image data and analyzed model performance for thorough evaluation and refinement.}
-          \resumeItem{Created a user-friendly GUI application and utilized Python libraries effectively for streamlined development and enhanced collaboration.}
-          \resumeItem{Utilized Git for version control, maintaining a clean and organized codebase.}
-          \resumeItem{Employed Seaborn and Matplotlib for data visualization, enhancing the presentation of results.}
+          % \resumeItem{Proficiently managed image data and analyzed model performance for thorough evaluation and improvement.}
+          % \resumeItem{Created a GUI that accesses device camera to display live video and classification results.}
+          % \resumeItem{Utilized Git for version control, maintaining a clean and organized codebase.}
+          \resumeItem{Employed \textbf{Seaborn} and \textbf{Matplotlib} for data visualization.}
         \resumeItemListEnd
 
-        \resumeProjectHeading
-        {\textbf{Yagi-Uda Antenna Design} $|$ \emph{Antenna Design, Signal Processing, Docuementation}}{March 2022 -- May 2022}
-        \resumeItemListStart
-          \resumeItem{Designed a Yagi-Uda antenna using copper wires and a split coaxial cable.}
-          \resumeItem{Ensured optimal signal reception by achieving a power transfer of -20dB, indicating that ~1\% of power was reflected.}
-          \resumeItem{Conducted experiments to measure the performance of the antenna under different conditions (materials, orientations).}
-          \resumeItem{Used RTL-SDR USB radio devices and software to measure and analyze signal outputs.}
-          \resumeItem{Identified and resolved issues during the design and testing phases of the antenna project, such as signal interference.}
-          \resumeItem{Ensured precision in component measurements and soldering to achieve desired signal reception and circuit performance.}
-          \resumeItem{Documented the design, methodology, results, and analysis of the projects in detailed reports.}
-          \resumeItem{Tested the antenna with various materials between the transmitting and receiving antennas, demonstrating robustness and adaptability to different environmental conditions.}
-          \resumeItem{Used RTL-SDR USB for receiving and demodulating audio signals, and measuring signal outputs under various conditions}
-        \resumeItemListEnd
+        % \resumeProjectHeading
+        % {\textbf{Yagi-Uda Antenna Design} $|$ \emph{Antenna Design, Signal Processing, Docuementation}}{March 2022 -- May 2022}
+        % \resumeItemListStart
+        %   \resumeItem{Designed a Yagi-Uda antenna using copper wires and a split coaxial cable.}
+        %   \resumeItem{Ensured optimal signal reception by achieving a power transfer of -20dB, indicating that ~1\% of power was reflected.}
+        %   \resumeItem{Conducted experiments to measure the performance of the antenna under different conditions (materials, orientations).}
+        %   \resumeItem{Used RTL-SDR USB radio devices and software to measure and analyze signal outputs.}
+        %   \resumeItem{Identified and resolved issues during the design and testing phases of the antenna project, such as signal interference.}
+        %   \resumeItem{Ensured precision in component measurements and soldering to achieve desired signal reception and circuit performance.}
+        %   \resumeItem{Documented the design, methodology, results, and analysis of the projects in detailed reports.}
+        %   \resumeItem{Tested the antenna with various materials between the transmitting and receiving antennas, demonstrating robustness and adaptability to different environmental conditions.}
+        %   \resumeItem{Used RTL-SDR USB for receiving and demodulating audio signals, and measuring signal outputs under various conditions}
+        % \resumeItemListEnd
         
-        \resumeProjectHeading
-        {\textbf{AM Receiver System Desing} $|$ \emph{Circuit Design and Analysis, Multisim, Simulation}}{Oct 2021 -- Dec 2021}
-        \resumeItemListStart
-          \resumeItem{Designed and implemented an AM receiver system.}
-          \resumeItem{Developed active filter and base-band amplifier circuits.}
-          \resumeItem{Used parametric sweeps and AC analysis to optimize circuit performance.}
-          \resumeItem{Analyzed signals at different points in the AM receiver circuit to ensure proper reception and demodulation.}
-          \resumeItem{Used simulation software (NI Multisim) to verify theoretical calculations and optimize circuit designs.}
-          \resumeItem{Documented the design, methodology, results, and analysis of the projects in detailed reports.}
-          \resumeItem{Utilized for DC and AC analysis, including tools like Multisim or similar simulation platforms for parametric sweeps and small-signal analysis.}
-        \resumeItemListEnd
+        % \resumeProjectHeading
+        % {\textbf{AM Receiver System Design} $|$ \emph{Analog Circuit Design, Multisim, Simulation}}{Oct 2021 -- Dec 2021}
+        % \resumeItemListStart
+        %   \resumeItem{Designed and implemented an AM receiver system in \textbf{NI Multisim}, focusing on analog circuit design and signal processing.}
+        %   \resumeItem{Developed active filter and base-band amplifier circuits for improved signal clarity.}
+        %   \resumeItem{Used parametric sweeps and \textbf{AC analysis} to optimize circuit performance.}
+        %   % \resumeItem{Analyzed signals at different points in the AM receiver circuit to ensure proper reception and demodulation.}
+        %   % \resumeItem{Used NI Multisim to verify circuit design and confirm theoretical calculations.}
+        %   \resumeItem{Documented the design, methodology, results, and analysis of the projects in detailed reports.}
+        %   % \resumeItem{Utilized for DC and AC analysis, including tools like Multisim or similar simulation platforms for parametric sweeps and small-signal analysis.}
+        % \resumeItemListEnd
   
-        \resumeProjectHeading
-        {\textbf{Altera DE10-Lite Distance Sensor} $|$ \emph{VHDL, Intel Quartus Prime, MODELSIM, FPGA}}{Sept 2021 -- Dec 2021}
-        \resumeItemListStart
-          \resumeItem{Implemented voltage-to-distance conversion in VHDL using Intel Quartus Prime.}
-          \resumeItem{Design and implementation met timing requirements for digital signal processing.}
-          \resumeItem{Created testbenches to conduct tests and simulate digital signals and switch gates to be verified using MODELSIM.}
-          \resumeItem{Configured DE10 display for distance/voltage based on switch state.}
-          \resumeItem{Demonstrated proficiency in FPGA programming, sensor integration, and VHDL, highlighting skills in hardware design and testing.}
-          \resumeItem{Generated RTL schematic to view flow of bits.}
-        \resumeItemListEnd
+        % \resumeProjectHeading
+        % {\textbf{Altera DE10-Lite Distance Sensor} $|$ \emph{VHDL, Intel Quartus Prime, MODELSIM, FPGA}}{Sep 2021 -- Dec 2021}
+        % \resumeItemListStart
+        %   \resumeItem{Implemented voltage-to-distance conversion in VHDL using Intel Quartus Prime.}
+        %   % \resumeItem{Design and implementation met timing requirements for digital signal processing.}
+        %   \resumeItem{Created \textbf{testbenches} to conduct tests and simulate digital signals and switch gates to be verified using \textbf{MODELSIM}.}
+        %   \resumeItem{Configured DE10 display for distance/voltage based on switch state.}
+        %   \resumeItem{Demonstrated proficiency in \textbf{FPGA programming}, sensor integration, highlighting skills in hardware design and testing.}
+        %   % \resumeItem{Generated RTL schematic to view flow of bits.}
+        % \resumeItemListEnd
         
-        \resumeProjectHeading
-        {\textbf{Point Based Graphical Zoom} $|$ \emph{MATLAB, Graphical User Interface, Image Processing}}{July 2021 -- July 2021}
-        \resumeItemListStart
-          \resumeItem{Used MATLAB to create a graphical point-based zoom function.}
-          \resumeItem{The function generated a bounding box and produced a new figure based on any two points on a MATLAB-produced graph.}
-        \resumeItemListEnd
+        % \resumeProjectHeading
+        % {\textbf{Point Based Graphical Zoom} $|$ \emph{MATLAB, Graphical User Interface, Image Processing}}{July 2021 -- July 2021}
+        % \resumeItemListStart
+        %   \resumeItem{Used MATLAB to create a graphical point-based zoom function.}
+        %   \resumeItem{The function generated a bounding box and produced a new figure based on any two points on a MATLAB-produced graph.}
+        % \resumeItemListEnd
 
         \resumeProjectHeading
         {\textbf{UnderPressure Posture Corrector} $|$ \emph{C++, Embedded Systems, Agile, Product Development}}{Jan 2021 -- May 2021}
         \resumeItemListStart
-          \resumeItem{Developed an Arduino-based posture corrector using an Arduino Nano, resistive strips, and a speaker.}
-          \resumeItem{Applied voltage dividers and utilized C++ and Arduino IDE for embedded programming.}
-          \resumeItem{Implemented Agile project management methodologies (sprint and scrum) for efficient development.}
-          \resumeItem{Received awards for "Most Innovative Product," "Best Marketing," and "Best Use of Humor."}
+          \resumeItem{Developed an Arduino-based posture corrector using an Arduino Nano, C++ , resistive strips, and a speaker.}
+          % \resumeItem{Applied voltage dividers and utilized C++ and Arduino IDE for embedded programming.}
+          \resumeItem{Implemented \textbf{Agile project management methodologies} (sprint and scrum) for efficient development and teamwork.}
+          \resumeItem{Received awards for "Most Innovative Product" "Best Marketing" and "Best Use of Humor" from Electrical Eng. Department}
         \resumeItemListEnd
 
         
-        \resumeProjectHeading
-        {\textbf{DFF Synchronous Sequential Circuit} $|$ \emph{Simulation, Analysis, Digital logic Design}}{Nov 2020 -- Dec 2020}
-        \resumeItemListStart
-          \resumeItem{Implemented d-latches and d-flip-flops using Quartus for simulation and verification.}
-          \resumeItem{Designed a synchronous detector circuit, creating state transition diagrams and K-maps to define behavior.}
-          \resumeItem{Developed a clock divider to manage timing requirements within digital circuits.}
-          \resumeItem{Utilized Intel Quartus Prime for designing, simulating and verifying digital circuits.}
-          \resumeItem{Utilized K-maps to simplify logic desing.}
-          \resumeItem{Ensured accurate operation of digital components, with the synchronous detector circuit correctly identifying the binary sequences}
-          \resumeItem{Simplified logical expressions from K-maps to enhance circuit efficiency, demonstrating advanced problem-solving skills.}
-        \resumeItemListEnd
+        % \resumeProjectHeading
+        % {\textbf{DFF Synchronous Sequential Circuit} $|$ \emph{Simulation, Analysis, Digital logic Design}}{Nov 2020 -- Dec 2020}
+        % \resumeItemListStart
+        %   \resumeItem{Implemented d-latches and d-flip-flops using Quartus for simulation and verification of digital circuits.}
+        %   \resumeItem{Designed a synchronous detector circuit, creating state transition diagrams and K-maps to define behavior.}
+        %   \resumeItem{Developed a clock divider to manage timing requirements within digital circuits.}
+        %   % \resumeItem{Utilized Intel Quartus Prime for designing, simulating and verifying digital circuits.}
+        %   % \resumeItem{Utilized K-maps to simplify logic design.}
+        %   % \resumeItem{Ensured accurate operation of digital components, with the synchronous detector circuit correctly identifying the binary sequences}
+        %   % \resumeItem{Simplified logical expressions from K-maps to enhance circuit efficiency, demonstrating advanced problem-solving skills.}
+        % \resumeItemListEnd
 
-        \resumeProjectHeading
-        {\textbf{C++ Flight Management Program} $|$ \emph{C++, File Handling, Algorithm, Software Development}}{June 2020 -- July 2020}
-        \resumeItemListStart
-          \resumeItem{Developed and implemented a Flight Management Program in C++, incorporating classes for Flight, Passenger, and Seat.}
-          \resumeItem{Utilized file handling to read and process flight information from a text file, showcasing proficiency in data input/output operations.}
-          \resumeItem{Implemented functionalities such as displaying seat maps, managing passenger information, adding/removing passengers, and saving data to enhance the program's usability.}
-          \resumeItem{Applied the Selection Sort algorithm for efficient organization of passenger data based on seat locations, demonstrating algorithmic problem-solving skills.}
-        \resumeItemListEnd
+        % \resumeProjectHeading
+        % {\textbf{C++ Flight Management Program} $|$ \emph{C++, File Handling, Algorithm, Software Development}}{June 2020 -- July 2020}
+        % \resumeItemListStart
+        %   \resumeItem{Developed and implemented a Flight Management Program in C++, incorporating classes for Flight, Passenger, and Seat.}
+        %   \resumeItem{Utilized file handling to read and process flight information from a text file, showcasing proficiency in data input/output operations.}
+        %   \resumeItem{Implemented functionalities such as displaying seat maps, managing passenger information, adding/removing passengers, and saving data to enhance the program's usability.}
+        %   \resumeItem{Applied the Selection Sort algorithm for efficient organization of passenger data based on seat locations, demonstrating algorithmic problem-solving skills.}
+        % \resumeItemListEnd
   
-        \resumeProjectHeading
-        {\textbf{Impact of Green Line LRT Research Project} $|$ \emph{Research, Analysis, Presentation}}{July 2020 -- Aug 2020}
-        \resumeItemListStart
-          \resumeItem{Researched and wrote a report on the impact of the Green Line LRT and its stations on stakeholders.}
-          \resumeItem{Analyzed stakeholders, including the public, residents near the station, taxpayers, and Calgary Transit employees.}
-          \resumeItem{Considered financial restrictions and proposed solutions to potential problems.}
-          \resumeItem{Gave a professional and technical presentation summarizing findings.}
-        \resumeItemListEnd
-        
-        \resumeProjectHeading
-        {\textbf{Calgary Weather Data Visualization} $|$ \emph{Java, GUI, Data Visualization}}{Nov 2019 -- Dec 2019}
-        \resumeItemListStart
-          \resumeItem{Implemented a GUI and user-interactive program using Java-based Language Processing.}
-          \resumeItem{Displayed daily average minimum and maximum temperature data for the last 30 years in Calgary.}
-          \resumeItem{Enabled user flexibility in selecting data for specific months and displaying maximum or minimum temperatures.}
-        \resumeItemListEnd
+        % \resumeProjectHeading
+        % {\textbf{Impact of Green Line LRT Research Project} $|$ \emph{Research, Analysis, Presentation}}{July 2020 -- Aug 2020}
+        % \resumeItemListStart
+        %   \resumeItem{Researched and wrote a report on the impact of the Green Line LRT and its stations on stakeholders.}
+        %   \resumeItem{Analyzed stakeholders, including the public, residents near the station, taxpayers, and Calgary Transit employees.}
+        %   \resumeItem{Considered financial restrictions and proposed solutions to potential problems.}
+        %   \resumeItem{Gave a professional and technical presentation summarizing findings.}
+        % \resumeItemListEnd
+      
+
+        % \resumeProjectHeading
+        % {\textbf{Computer Networks} $|$ \emph{Problem Solving, Mathematical Analysis, Team work}}{Sep 2023 -- Dec 2023}
+        % \resumeItemListStart
+        %   % \resumeItem{Gained expertise in ensuring reliable communications over a link and managing medium access.}
+        %   \resumeItem{Learned about packet routing techniques, protocols and network architectures.}
+        %   \resumeItem{Explored transport layer protocols, application layer services and data and network security principles.}
+        %   % \resumeItem{Developed a solid understanding of data and network security principles.}
+        %   % \resumeItem{Conducted mathematical network analysis and utilized network performance software tools for practical insights.}
+        % \resumeItemListEnd
+
+        % \resumeProjectHeading
+        % {\textbf{Power Systems Analysis} $|$ \emph{Power Flow, Stability, Control}}{Sep 2023 -- Dec 2023}
+        % \resumeItemListStart
+        %   \resumeItem{Performed advanced power flow studies (decoupled/fast decoupled/DC) by utilizing Newton-Raphson methods for analysis.}  %and conducted distribution factor and contingency analysis.}
+        %   \resumeItem{Investigated transient and voltage stability, and examined load frequency and voltage control of generators.}
+        %   \resumeItem{Studied power generation economics (economic dispatch/cost curves) and modeled complex power systems using PSSE.}
+        %   % \resumeItem{Applied three-phase systems, per unit representation, and conducted power flow analysis using PowerWorld.}
+        % \resumeItemListEnd
+
+        % \resumeProjectHeading
+        % {\textbf{Electrical Engineering Energy Systems} $|$ \emph{Power Generation, Transmission, Distribution}}{Jan 2022 -- Apr 2022}
+        % \resumeItemListStart
+        %   \resumeItem{Studied energy resources and developed models for generators, loads, transformers, and transmission lines.}
+        %   \resumeItem{Applied three-phase systems, per unit representation, and conducted power flow analysis using PowerWorld.}
+        %   \resumeItem{Analyzed transmission line parameters in lab settings.}
+        % \resumeItemListEnd
+
+
+        % \resumeProjectHeading
+        % {\textbf{Network Infrastructure Enhancement} $|$ \emph{DHCP reservation, QoS, Port Forwarding, Documentation}}{Oct 2023 -- Nov 2023}
+        % \resumeItemListStart
+        %   \resumeItem{Developed a comprehensive home network upgrade solution incorporating advanced features such as VLAN support, Adaptive QoS, and Link Aggregation to enhance security, efficiency, and performance.}
+        %   \resumeItem{Configured and implemented port forwarding to enable remote desktop access and secure file transfer via SFTP, ensuring seamless connectivity and data security for client devices.}
+        %   % \resumeItem{Successfully designed and deployed a separate guest network utilizing virtual interfaces and bandwidth limits to protect sensitive data and manage network load effectively.}
+        %   \resumeItem{Managed the setup of a static IP for network devices through DHCP reservation, ensuring consistent device connectivity and simplified network management.}
+        % \resumeItemListEnd
 
       \resumeSubHeadingListEnd  
         
@@ -485,52 +577,39 @@
 
 
 %
-%-----------PROGRAMMING SKILLS-----------
-% \section{Technical Skills}
-%  \begin{itemize}[leftmargin=0.15in, label={}]
-%     \small{\item{
-%      \textbf{Languages}{: Java, Python, C/C++, MATLAB, JavaScript, HTML/CSS, Assembly (ARM, MIPS), Verilog} \\
-%      \textbf{Frameworks}{: React, Node.js, Flask, FastAPI, Tensorflow, PyTorch} \\
-%      \textbf{Developer Tools}{: Git, Gerrit, Linux, PuTTy, MS Azure, VS Code, PyCharm, Jira} \\
-%      \textbf{Design and Simulation}{: Cadence Allegro, MODELSIM, NI Multisim, PS:SE, Xilinx Vivado, Intel Quartus Prime, SIMULINK}\\
-%      \textbf{Hardware Tools}{: Oscilloscope, Spectrum Analyzer, Multimeter, Solder, Power Supplies, STM MCU, Pynq Z2 FPGA, PIC MCU}\\
-%      \textbf{Libraries}{: Pandas, NumPy, Matplotlib, Seaborn, Tkinter, Keras, OpenCV, Pillow, Scikit-learn}\\
-%      \textbf{Hobbies}{: Soccer, Badminton, Kick Boxing, Photography, Table Tennis}\\
-%     }}
-%  \end{itemize}
+% -----------PROGRAMMING SKILLS-----------
+\section{Technical Skills}
+ \begin{itemize}[leftmargin=0.15in, label={}]
+    \small{\item{
+     \textbf{Hardware Tools}{: Thermocouple, Oscilloscope, Spectrum Analyzer, Multimeter, Solder, Power Supplies}\\
+     \textbf{Design and Simulation}{: Cadence Allegro, MODELSIM, NI Multisim, SOLIDWORKS, Intel Quartus Prime, SIMULINK}\\
+     \textbf{Languages}{: VHDL, Java, Python, C/C++, MATLAB, JavaScript, HTML/CSS, Assembly (ARM, MIPS)} \\
+     \textbf{Frameworks}{: React Native, Node.js, Flask, Tensorflow, PyTorch} \\
+     \textbf{Developer Tools}{: Git, Gerrit, Linux, PuTTy, MS Azure, VS Code, PyCharm, Jira} \\
+    %  \textbf{Design and Simulation}{: Xilinx Vivado, Intel Quartus Prime, Cadence Allegro, MODELSIM, NI Multisim. SIMULINK}\\
+     \textbf{Libraries}{: Pandas, NumPy, Matplotlib, Seaborn, Tkinter, Keras, OpenCV, Pillow, Scikit-learn, NetworkX, OpenStreetMap}\\
+    %  \textbf{Hobbies}{: Soccer, Badminton, Kick Boxing, Photography, Table Tennis}\\
+    }}
+ \end{itemize}
 
  %-----------Awards-----------
 \section{Awards}
 % \resumeItemListStart
-%     \resumeItem{Jason Lang Scholarship (2020,2021,2023), Dean's List (2020, 2021, 2024)}
+    % \resumeItem{Jason Lang Scholarship (2020,2021,2023), Dean's List (2020, 2021, 2024)}
 %  \resumeItemListEnd
  \begin{itemize}[leftmargin=0.15in, label={}]
   \small{\item{
-   \textbf{Jason Lang Scholarship}{(2020, 2021, 2023),} \textbf{Dean's List}{(2020, 2021, 2024)}
+    \textbf{Mitacs Accelerate Fellowship}{(\$37,500),} \textbf{Jason Lang Scholarship}{(\$3000),} \textbf{Dean's List}{(2020, 2021, 2024)} % \textbf{Jason Lang Scholarship}{(2020, 2021, 2023),}
   }}
 \end{itemize}
 
 
 %%%% Key Courses %%%%%%%%%%
 % \section{Key Courses}
-\begin{itemize}[leftmargin=0.05in, label={}]
-    \small{
-    % Electrical Engineering
-    \item \textbf{Electrical Engineering:}\\
-    \begin{itemize}[leftmargin=0.15in, label={}]
-        \item \textbf{Digital Circuits}{: Number systems, Boolean algebra, combinational and sequential circuits, counters, registers, and memory arrays.}\\
-        \item \textbf{Digital Systems Design}{: Digital system design and testing, programmable technology, CAD tools, and design for testability.}\\
-        \item \textbf{Digital Electronic Circuits}{: MOS transistor fundamentals, MOS logic gates, memory, and integrated circuit design.}\\
-        \item \textbf{Analog Electronic Circuits}{: BJT amplifiers, operational amplifier circuits, power amplifiers.}\\
-        \item \textbf{Circuits II}{: Laplace transforms, transfer functions, filter theory, transient responses, two-port circuits.}\\
-        \item \textbf{Electromagnetic Waves and Applications}{: Wave propagation, transmission line theory, scattering parameters, waveguides.}\\
-        \item \textbf{Power Systems Analysis}{: Power flow studies, stability, load frequency control, voltage control, power generation economics.}\\
-        \item \textbf{Electrical Engineering Energy Systems}{: Power generation, transmission, distribution, three-phase systems, power flow analysis.}\\
-        \item \textbf{Electronic Devices and Materials}{: Semiconductors, diodes, BJTs, MOSFETs, material properties.}\\
-    \end{itemize}
-    
-%     % Software Engineering
-%     \item \textbf{Software Engineering:}
+% \begin{itemize}[leftmargin=0.05in, label={}]
+%     \small{
+%     % Electrical Engineering
+%     \item \textbf{Electrical Engineering:}\\
 %     \begin{itemize}[leftmargin=0.15in, label={}]
 %         \item \textbf{Digital Circuits}{: Number systems, Boolean algebra, combinational and sequential circuits, counters, registers, and memory arrays.}\\
 %         \item \textbf{Digital Systems Design}{: Digital system design and testing, programmable technology, CAD tools, and design for testability.}\\
@@ -543,31 +622,34 @@
 %         \item \textbf{Electronic Devices and Materials}{: Semiconductors, diodes, BJTs, MOSFETs, material properties.}\\
 %     \end{itemize}
     
-    % Software Engineering
-    \item \textbf{Software Engineering:}
-    \begin{itemize}[leftmargin=0.15in, label={}]
-        \item \textbf{Advanced Software Design and Development}{: Software modelling and design, object-oriented design, concurrent and database programming, systems integration.}\\
-        \item \textbf{Advanced Applied AI and ML}{: Data extraction and visualization, learning algorithms, neural network architectures.}\\
-        \item \textbf{Industrial IoT Systems and Data Analytics}{: IIoT fundamentals, digital frameworks, data analytics.}\\
-        \item \textbf{Cyber-Physical Systems Engineering}{: Design, reliability, performance, security of cyber-physical systems, FSM design.}\\
-        \item \textbf{Computer Organisation}{: CPU, memory, instruction sets, assembly language, virtual memory, I/O devices.}\\
-        \item \textbf{Application Specific Processors and Accelerators}{: RISC, CISC, application-specific processors, hardware/software optimization, hardware-software co-design.}\\
-    \end{itemize}
+%     % Software Engineering
+%     \item \textbf{Software Engineering:}
+%     \begin{itemize}[leftmargin=0.15in, label={}]
+%         \item \textbf{Advanced Software Design and Development}{: Software modelling and design, object-oriented design, concurrent and database programming, systems integration.}\\
+%         \item \textbf{Advanced Applied AI and ML}{: Data extraction and visualization, learning algorithms, neural network architectures.}\\
+%         \item \textbf{Industrial IoT Systems and Data Analytics}{: IIoT fundamentals, digital frameworks, data analytics.}\\
+%         \item \textbf{Cyber-Physical Systems Engineering}{: Design, reliability, performance, security of cyber-physical systems, FSM design.}\\
+%         \item \textbf{Computer Organisation}{: CPU, memory, instruction sets, assembly language, virtual memory, I/O devices.}\\
+%         \item \textbf{Application Specific Processors and Accelerators}{: RISC, CISC, application-specific processors, hardware/software optimization, hardware-software co-design.}\\
+%     \end{itemize}
     
-    % Telecommunications
-    \item \textbf{Telecommunications:}\\
-    \begin{itemize}[leftmargin=0.15in, label={}]
-        \item \textbf{Signals and Transforms}{: Continuous and discrete-time signals, Fourier and Z-transforms, sampling theory.}\\
-        \item \textbf{Communications Systems and Networks}{: Analog and digital communications, network protocol architectures, data/network security, performance analysis.}\\
-    \end{itemize}
+%     % Telecommunications
+%     \item \textbf{Telecommunications:}\\
+%     \begin{itemize}[leftmargin=0.15in, label={}]
+%         \item \textbf{Signals and Transforms}{: Continuous and discrete-time signals, Fourier and Z-transforms, sampling theory.}\\
+%         \item \textbf{Communications Systems and Networks}{: Analog and digital communications, network protocol architectures, data/network security, performance analysis.}\\
+%     \end{itemize}
     
-    % Control Systems
-    \item \textbf{Control Systems:}\\
-    \begin{itemize}[leftmargin=0.15in, label={}]
-        \item \textbf{Control Systems I}{: Dynamic systems modeling, feedback control, transient and steady-state analysis, frequency response, compensation design.}\\
-    \end{itemize}
-    }
-\end{itemize}
+%     % Control Systems
+%     \item \textbf{Control Systems:}\\
+%     \begin{itemize}[leftmargin=0.15in, label={}]
+%         \item \textbf{Control Systems I}{: Dynamic systems modeling, feedback control, transient and steady-state analysis, frequency response, compensation design.}\\
+%     \end{itemize}
+%     }
+% \end{itemize}
 
 %-------------------------------------------
+
 \end{document}
+
+
